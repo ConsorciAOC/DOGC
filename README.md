@@ -102,18 +102,8 @@ El DOGC requereix que tota operació relacionada amb una publicació vagi acompa
 /ordreInsercio/document | Bloc de dades corresponent al document a publicar.
 /document/identificador | Codi de document del sistema origen (el mateix que s&#39;informa a l&#39;element peticioSolicitudPublicacio /identificador).  Pels serveis externs a EACAT, aquest identificador haurà de tenir un prefix que identifiqui el servei d&#39;origen. Cal acordar amb el Consorci AOC el prefix que cada requeridor ha d&#39;emprar.
 /document/titol | Títol del document. Com a mínim s&#39;ha d&#39;informar un títol (en català o castellà).
-/document/idioma | Codi d&#39;idioma: - ca\_es: català - es: castellà - oc\_es: aranès
-/document/tipus | Tipus de document:
-- 009: Resolució
-- 010: Circular
-- 011: Edicte
-- 012: Anunci
-- 013: Decret de l&#39;Administració local
-- 015: Correcció d&#39;errades
-- 018: Instrucció
-- 019: Acord
-- 140: Dictamen
-- 150: Ordenança municipal
+/document/idioma | Codi d&#39;idioma: 1: ca\_es: català, 2: es: castellà, 3: oc\_es: aranès
+/document/tipus | Tipus de document:<ul><li>009: Resolució</li><li>010: Circular</li><li>011: Edicte</li><li>012: Anunci</li><li>013: Decret de l&#39;Administració local</li><li>015: Correcció d&#39;errades</li><li>018: Instrucció</li><li>019: Acord</li><li>140: Dictamen</li><li>150: Ordenança municipal</li></ul>|
 /document/observacions | Observacions de l&#39;usuari que publica.
 /document/data | Data del document a publicar.
 /document/dadesPersonals | Indica si el document conté dades de caràcter personal (S / N).
