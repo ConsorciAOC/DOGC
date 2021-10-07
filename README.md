@@ -76,9 +76,8 @@ Les operacions disponibles a través del servei són les que es presenten a cont
 
 A continuació es detalla la missatgeria corresponent al bloc de dades específiques de les diferents operacions del servei.
 
-[](RackMultipart20211007-4-7ma4kz_html_e0859da4ac8c0eca.png) | L&#39;organisme que realitza la publicació s&#39;identifica en l&#39;element de la missatgeria genèrica DatosAutorizacion/IdentificadorSolicitante.
+L&#39;organisme que realitza la publicació s&#39;identifica en l&#39;element de la missatgeria genèrica DatosAutorizacion/IdentificadorSolicitante.
  En cas que la integració es realitzi via una plataforma intermediària – **com en el cas de la PCSP** - caldrà informar el codi INE10 de l&#39;organisme emissor del document a l&#39;element IdSolicitanteOriginal.
- |
 
 ## 3.1 Sol·licitud de publicació
 
@@ -86,9 +85,8 @@ A continuació es detalla la missatgeria corresponent al bloc de dades específi
 
 | _Element_ | _Descripció_ |
 | --- | --- |
-| /peticioSolicitudPublicacio/identificador | Codi de document del sistema origen (únic).
-
- |
+| /peticioSolicitudPublicacio/identificador | Codi de document del sistema origen (únic).|
+| /peticioSolicitudPublicacio/identificador | Codi de document del sistema origen (únic).|
 
 /peticioSolicitudPublicacio/ordreInsercio | XML codificat en Base64 amb la informació del document a publicar.
  L&#39;ordre d&#39;inserció ha d&#39;estar signada en format XAdES-BES (signatura bàsica, _enveloped_) emprant un certificat de signatura reconeguda (nivell 4).
