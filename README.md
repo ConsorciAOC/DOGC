@@ -131,11 +131,7 @@ El DOGC requereix que tota operació relacionada amb una publicació vagi acompa
 //boe/lgt | S si l&#39;anunci s&#39;ha de publicar conforme el disposat a l&#39;article 112 de la Ley 58/2003 (Ley General Tributaria).
 //boe/materia | Matèria. Vegeu annex Matèries BOE.
 //boe/materia@id | Identificador de matèria. Vegeu annex Matèries BOE.
-//boe/procediment | Text lliure que permet construir de manera automatitzada el títol de l&#39;anunci BOE. No ha de contenir dades de caràcter personal.  
-El títol generat tindrà el següent format:  
-[entitat emisora]. Anuncio de notificación de [data] en procedimiento[s] [procediment].  
-L&#39;atribut plural (S/N) indicarà si cal emprar-se el plural en la paraula procediment.  
-La data que s&#39;emprarà a l&#39;hora de composar el títol de l&#39;anunci és la informada a //document/data.
+//boe/procediment | Text lliure que permet construir de manera automatitzada el títol de l&#39;anunci BOE. No ha de contenir dades de caràcter personal.<br/>El títol generat tindrà el següent format:<br/>[entitat emisora]. Anuncio de notificación de [data] en procedimiento[s] [procediment].<br/>L&#39;atribut plural (S/N) indicarà si cal emprar-se el plural en la paraula procediment.<br/>La data que s&#39;emprarà a l&#39;hora de composar el títol de l&#39;anunci és la informada a //document/data.
 //boe/procediment@plural |
 //boe/formaPublicacio | Forma de publicació:<ul><li>E: extracte</li><li>I: Íntegra</li></ul>
 /vboe/peuSignatura/localitat | Població on té lloc la signatura.
