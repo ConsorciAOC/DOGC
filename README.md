@@ -72,13 +72,11 @@ Les operacions disponibles a través del servei són les que es presenten a cont
 - Consulta d&#39;estat d&#39;una publicació
 - Realitzar operacions sobre una publicació
 
- |
-
 # 3 Missatgeria del servei
 
 A continuació es detalla la missatgeria corresponent al bloc de dades específiques de les diferents operacions del servei.
 
-![](RackMultipart20211007-4-7ma4kz_html_e0859da4ac8c0eca.png) | L&#39;organisme que realitza la publicació s&#39;identifica en l&#39;element de la missatgeria genèrica DatosAutorizacion/IdentificadorSolicitante.
+[](RackMultipart20211007-4-7ma4kz_html_e0859da4ac8c0eca.png) | L&#39;organisme que realitza la publicació s&#39;identifica en l&#39;element de la missatgeria genèrica DatosAutorizacion/IdentificadorSolicitante.
  En cas que la integració es realitzi via una plataforma intermediària – **com en el cas de la PCSP** - caldrà informar el codi INE10 de l&#39;organisme emissor del document a l&#39;element IdSolicitanteOriginal.
  |
 
@@ -91,8 +89,8 @@ A continuació es detalla la missatgeria corresponent al bloc de dades específi
 | /peticioSolicitudPublicacio/identificador | Codi de document del sistema origen (únic).
 
  |
-| --- | --- |
-| /peticioSolicitudPublicacio/ordreInsercio | XML codificat en Base64 amb la informació del document a publicar.
+
+/peticioSolicitudPublicacio/ordreInsercio | XML codificat en Base64 amb la informació del document a publicar.
  L&#39;ordre d&#39;inserció ha d&#39;estar signada en format XAdES-BES (signatura bàsica, _enveloped_) emprant un certificat de signatura reconeguda (nivell 4).
  En el cas d&#39;EACAT l&#39;ordre d&#39;inserció no estarà signada i la signatura s&#39;enviarà en un fitxer a banda de tipus signatura (tipus 4). En aquest cas el format de la signatura serà CAdES.
  Per més detalls sobre l&#39;estructura del XML consulteu l&#39;apartat 3.1.1.1 d&#39;aquest document.
