@@ -103,6 +103,7 @@ L&#39;organisme que realitza la publicació s&#39;identifica en l&#39;element de
 |/registre/registreEntrada/numero|Número d&#39;assentament d&#39;entrada a l&#39;EADOP.|
 
 |/registre/registreEntrada/data|Data d&#39;assentament d&#39;entrada a l&#39;EADOP.|
+| --- | --- |
 
 #### 3.1.1.1 Ordre d&#39;inserció
 
