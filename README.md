@@ -85,24 +85,17 @@ L&#39;organisme que realitza la publicació s&#39;identifica en l&#39;element de
 
 | _Element_ | _Descripció_ |
 | --- | --- |
-| /peticioSolicitudPublicacio/identificador | Codi de document del sistema origen (únic).|
-| --- | --- |
-| /peticioSolicitudPublicacio/ordreInsercio | XML codificat en Base64 amb la informació del document a publicar.
+ /peticioSolicitudPublicacio/identificador | Codi de document del sistema origen (únic).
+ /peticioSolicitudPublicacio/ordreInsercio | XML codificat en Base64 amb la informació del document a publicar.
  L&#39;ordre d&#39;inserció ha d&#39;estar signada en format XAdES-BES (signatura bàsica, _enveloped_) emprant un certificat de signatura reconeguda (nivell 4).
  En el cas d&#39;EACAT l&#39;ordre d&#39;inserció no estarà signada i la signatura s&#39;enviarà en un fitxer a banda de tipus signatura (tipus 4). En aquest cas el format de la signatura serà CAdES.
- Per més detalls sobre l&#39;estructura del XML consulteu l&#39;apartat 3.1.1.1 d&#39;aquest document.|
-| --- | --- |
-| /peticioSolicitudPublicacio/registre | Bloc de dades corresponent a la informació de registre.
- Només s&#39;ha d&#39;informar quan la petició procedeix d&#39;EACAT. Per a la resta de sistemes els assentaments es realitzaran automàticament.|
-| --- | --- |
-|/registre/registreSortida/numero|Número d&#39;assentament de sortida de l&#39;organisme.|
-| --- | --- |
-|/registre/registreSortida/data|Data d&#39;assentament de sortida de l&#39;organisme.|
-| --- | --- |
-|/registre/registreEntrada/numero|Número d&#39;assentament d&#39;entrada a l&#39;EADOP.|
-| --- | --- |
-|/registre/registreEntrada/data|Data d&#39;assentament d&#39;entrada a l&#39;EADOP.|
-| --- | --- |
+ Per més detalls sobre l&#39;estructura del XML consulteu l&#39;apartat 3.1.1.1 d&#39;aquest document.
+ /peticioSolicitudPublicacio/registre | Bloc de dades corresponent a la informació de registre.
+ Només s&#39;ha d&#39;informar quan la petició procedeix d&#39;EACAT. Per a la resta de sistemes els assentaments es realitzaran automàticament.
+/registre/registreSortida/numero|Número d&#39;assentament de sortida de l&#39;organisme.
+/registre/registreSortida/data|Data d&#39;assentament de sortida de l&#39;organisme.
+/registre/registreEntrada/numero|Número d&#39;assentament d&#39;entrada a l&#39;EADOP.
+/registre/registreEntrada/data|Data d&#39;assentament d&#39;entrada a l&#39;EADOP.
 
 #### 3.1.1.1 Ordre d&#39;inserció
 
