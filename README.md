@@ -96,8 +96,7 @@ El DOGC requereix que tota operació relacionada amb una publicació vagi acompa
 /ordreInsercio/fitxers | Bloc de dades corresponent als fitxers a publicar.
 /ordreInsercio/fitxers/fitxer | Bloc de dades corresponent a un fitxer a publicar.
 /fitxer/identificador | Identificador de document. Únic en la petició. Per identificar cada adjunt, caldrà alinear l&#39;atribut Fichero@Id del bloc de dades genèriques amb l&#39;element identificador de cadascun dels document informats a les dades específiques de la sol·licitud.  En cas de transferència de fitxers adjunts seguint l&#39;estàndard MTOM, cal informar els adjunts en l&#39;element Contenido del bloc de dades genèriques Ficheros destinat a aquest efecte. La grandària màxima de fitxer suportada són 10MB.
-/fitxer/nom | Nom del fitxer. El nom del fitxer no es pot repetir en la mateixa ordre d&#39;inserció.
- Només s&#39;accepten caràcters alfanumèrics (sense accents) i els caràcters &#39;.&#39;, &#39;-&#39;, &#39;\_&#39; i &#39; &#39;.
+/fitxer/nom | Nom del fitxer. El nom del fitxer no es pot repetir en la mateixa ordre d&#39;inserció. Només s&#39;accepten caràcters alfanumèrics (sense accents) i els caràcters &#39;.&#39;, &#39;-&#39;, &#39;\_&#39; i &#39; &#39;.
 /fitxer/idioma | Codi d&#39;idioma:<ul><li>ca\_es: català</li><li>es: castellà</li><li>oc\_es: aranès</li></ul>
 /fitxer/tipus | Tipus de fitxer:<ul><li>1: Principal (.doc, .docx i .rtf)</li><li>2: Annex (.doc, .docx i .rtf)</li><li>3: Imatges i PDFs (.pdf, .jpg. tiff)</li><li>4: Fitxer signatura si la petició procedeix d&#39;EACAT.</li></ul>
 /fitxer/ordre | Ordre en que es publicaran els annexos al final del document principal. Obligatori pel tipus de fitxers annex (2).
