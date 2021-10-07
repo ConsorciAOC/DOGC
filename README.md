@@ -100,13 +100,9 @@ El DOGC requereix que tota operació relacionada amb una publicació vagi acompa
 | _Element_ | _Descripció_ |
 | --- | --- |
 /ordreInsercio/document | Bloc de dades corresponent al document a publicar.
-/document/identificador | Codi de document del sistema origen (el mateix que s&#39;informa a l&#39;element peticioSolicitudPublicacio /identificador).
- Pels serveis externs a EACAT, aquest identificador haurà de tenir un prefix que identifiqui el servei d&#39;origen. Cal acordar amb el Consorci AOC el prefix que cada requeridor ha d&#39;emprar.
+/document/identificador | Codi de document del sistema origen (el mateix que s&#39;informa a l&#39;element peticioSolicitudPublicacio /identificador).  Pels serveis externs a EACAT, aquest identificador haurà de tenir un prefix que identifiqui el servei d&#39;origen. Cal acordar amb el Consorci AOC el prefix que cada requeridor ha d&#39;emprar.
 /document/titol | Títol del document. Com a mínim s&#39;ha d&#39;informar un títol (en català o castellà).
-/document/idioma | Codi d&#39;idioma:
-- ca\_es: català
-- es: castellà
-- oc\_es: aranès
+/document/idioma | Codi d&#39;idioma: - ca\_es: català - es: castellà - oc\_es: aranès
 /document/tipus | Tipus de document:
 - 009: Resolució
 - 010: Circular
@@ -123,11 +119,7 @@ El DOGC requereix que tota operació relacionada amb una publicació vagi acompa
 /document/dadesPersonals | Indica si el document conté dades de caràcter personal (S / N).
 /ordreInsercio/fitxers | Bloc de dades corresponent als fitxers a publicar.
 /ordreInsercio/fitxers/fitxer | Bloc de dades corresponent a un fitxer a publicar.
-/fitxer/identificador | Identificador de document. Únic en la petició.
- Per identificar cada adjunt, caldrà alinear l&#39;atribut Fichero@Id del bloc de dades genèriques amb l&#39;element identificador de cadascun dels document informats a les dades específiques de la sol·licitud.
- En cas de transferència de fitxers adjunts seguint l&#39;estàndard MTOM, cal informar els adjunts en l&#39;element Contenido del bloc de dades genèriques Ficheros destinat a aquest efecte
-# 1.
- La grandària màxima de fitxer suportada són 10MB.
+/fitxer/identificador | Identificador de document. Únic en la petició. Per identificar cada adjunt, caldrà alinear l&#39;atribut Fichero@Id del bloc de dades genèriques amb l&#39;element identificador de cadascun dels document informats a les dades específiques de la sol·licitud.  En cas de transferència de fitxers adjunts seguint l&#39;estàndard MTOM, cal informar els adjunts en l&#39;element Contenido del bloc de dades genèriques Ficheros destinat a aquest efecte. La grandària màxima de fitxer suportada són 10MB.
 
 /fitxer/nom | Nom del fitxer. El nom del fitxer no es pot repetir en la mateixa ordre d&#39;inserció.
  Només s&#39;accepten caràcters alfanumèrics (sense accents) i els caràcters &#39;.&#39;, &#39;-&#39;, &#39;\_&#39; i &#39; &#39;.
