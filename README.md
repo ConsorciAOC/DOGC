@@ -12,8 +12,6 @@ Versió: 2.0
 
 Data: 7/10/2021
 
-Arxiu: RackMultipart20211007-4-7ma4kz.doc
-
  ![](RackMultipart20211007-4-7ma4kz_html_e7cf959e7fe4dc1d.png)
 
 **Control del document**
@@ -26,8 +24,7 @@ Arxiu: RackMultipart20211007-4-7ma4kz.doc
 | **A revisar per:** | Departament d&#39;Operacions – Suport a Integracions |
 | **A aprovar per:** | Departament d&#39;Operacions – Suport a Integracions |
 | **Llista de distribució:** |
- |
-| **Nom del document:** | RackMultipart20211007-4-7ma4kz.doc |
+| **Nom del document:** | DI - DOGC.doc |
 
 **Històric de revisions**
 
@@ -36,26 +33,6 @@ Arxiu: RackMultipart20211007-4-7ma4kz.doc
 | V1.0 | 18/06/2012 | Roger Noguera i Arnau | Creació del document. |
 | V1.1 | 02/04/2014 | Roger Noguera i Arnau | Adaptació a canvis en els serveis del DOGC |
 | V2.0 | 18/07/2016 | Roger Noguera i Arnau | Suport de publicació al TEU del BOE via DOGC. |
-|
- |
- |
- |
- |
-|
- |
- |
- |
- |
-|
- |
- |
- |
- |
-|
- |
- |
- |
- |
 
 # **Índex** #
 
@@ -96,16 +73,14 @@ Les operacions disponibles a través del servei són les que es presenten a cont
 - Realitzar operacions sobre una publicació
 
  |
-| --- | --- | --- |
 
 # 3 Missatgeria del servei
 
 A continuació es detalla la missatgeria corresponent al bloc de dades específiques de les diferents operacions del servei.
 
-| ![](RackMultipart20211007-4-7ma4kz_html_e0859da4ac8c0eca.png) | L&#39;organisme que realitza la publicació s&#39;identifica en l&#39;element de la missatgeria genèrica DatosAutorizacion/IdentificadorSolicitante.
+![](RackMultipart20211007-4-7ma4kz_html_e0859da4ac8c0eca.png) | L&#39;organisme que realitza la publicació s&#39;identifica en l&#39;element de la missatgeria genèrica DatosAutorizacion/IdentificadorSolicitante.
  En cas que la integració es realitzi via una plataforma intermediària – **com en el cas de la PCSP** - caldrà informar el codi INE10 de l&#39;organisme emissor del document a l&#39;element IdSolicitanteOriginal.
  |
-| --- | --- |
 
 ## 3.1 Sol·licitud de publicació
 
