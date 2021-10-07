@@ -1,18 +1,4 @@
-![](RackMultipart20211007-4-7ma4kz_html_f82d96c26cc03594.png)
-
-## **Diari Oficial de la Generalitat de Catalunya**
-
-## **Document d&#39;integració del servei**
-
- ![](RackMultipart20211007-4-7ma4kz_html_9b4dd0d250015309.gif) ![](RackMultipart20211007-4-7ma4kz_html_87fa512ea052536a.gif) ![](RackMultipart20211007-4-7ma4kz_html_951ed91e1bcd9028.gif) ![](RackMultipart20211007-4-7ma4kz_html_1eb070f55a9c9a8.gif)
-
-Realitzat per: Departament d&#39;Operacions – Unitat de Projectes
-
-Versió: 2.0
-
-Data: 7/10/2021
-
- ![](RackMultipart20211007-4-7ma4kz_html_e7cf959e7fe4dc1d.png)
+Documentació d'integració del servei DOGC del Consorci AOC.
 
 **Control del document**
 
@@ -102,13 +88,19 @@ El DOGC requereix que tota operació relacionada amb una publicació vagi acompa
 /ordreInsercio/document | Bloc de dades corresponent al document a publicar.
 /document/identificador | Codi de document del sistema origen (el mateix que s&#39;informa a l&#39;element peticioSolicitudPublicacio /identificador).  Pels serveis externs a EACAT, aquest identificador haurà de tenir un prefix que identifiqui el servei d&#39;origen. Cal acordar amb el Consorci AOC el prefix que cada requeridor ha d&#39;emprar.
 /document/titol | Títol del document. Com a mínim s&#39;ha d&#39;informar un títol (en català o castellà).
-/document/idioma | Codi d&#39;idioma: 1: ca\_es: català, 2: es: castellà, 3: oc\_es: aranès
+/document/idioma | Codi d&#39;idioma:<ul><li>ca\_es: català</li><li>es: castellà</li><li>oc\_es: aranès</li></ul>
 /document/tipus | Tipus de document:<ul><li>009: Resolució</li><li>010: Circular</li><li>011: Edicte</li><li>012: Anunci</li><li>013: Decret de l&#39;Administració local</li><li>015: Correcció d&#39;errades</li><li>018: Instrucció</li><li>019: Acord</li><li>140: Dictamen</li><li>150: Ordenança municipal</li></ul>|
+
 /document/observacions | Observacions de l&#39;usuari que publica.
+
 /document/data | Data del document a publicar.
+
 /document/dadesPersonals | Indica si el document conté dades de caràcter personal (S / N).
+
 /ordreInsercio/fitxers | Bloc de dades corresponent als fitxers a publicar.
+
 /ordreInsercio/fitxers/fitxer | Bloc de dades corresponent a un fitxer a publicar.
+
 /fitxer/identificador | Identificador de document. Únic en la petició. Per identificar cada adjunt, caldrà alinear l&#39;atribut Fichero@Id del bloc de dades genèriques amb l&#39;element identificador de cadascun dels document informats a les dades específiques de la sol·licitud.  En cas de transferència de fitxers adjunts seguint l&#39;estàndard MTOM, cal informar els adjunts en l&#39;element Contenido del bloc de dades genèriques Ficheros destinat a aquest efecte. La grandària màxima de fitxer suportada són 10MB.
 
 /fitxer/nom | Nom del fitxer. El nom del fitxer no es pot repetir en la mateixa ordre d&#39;inserció.
