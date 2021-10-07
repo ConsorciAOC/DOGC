@@ -72,8 +72,8 @@ L&#39;organisme que realitza la publicació s&#39;identifica en l&#39;element de
 | _Element_ | _Descripció_ |
 | --- | --- |
  //peticioSolicitudPublicacio/identificador | Codi de document del sistema origen (únic).
- //peticioSolicitudPublicacio/ordreInsercio | XML codificat en Base64 amb la informació del document a publicar. L&#39;ordre d&#39;inserció ha d&#39;estar signada en format XAdES-BES (signatura bàsica, _enveloped_) emprant un certificat de signatura reconeguda (nivell 4). En el cas d&#39;EACAT l&#39;ordre d&#39;inserció no estarà signada i la signatura s&#39;enviarà en un fitxer a banda de tipus signatura (tipus 4). En aquest cas el format de la signatura serà CAdES. Per més detalls sobre l&#39;estructura del XML consulteu l&#39;apartat 3.1.1.1 d&#39;aquest document.
- //peticioSolicitudPublicacio/registre | Bloc de dades corresponent a la informació de registre. Només s&#39;ha d&#39;informar quan la petició procedeix d&#39;EACAT. Per a la resta de sistemes els assentaments es realitzaran automàticament.
+ //peticioSolicitudPublicacio/ordreInsercio | XML codificat en Base64 amb la informació del document a publicar.<br/>L&#39;ordre d&#39;inserció ha d&#39;estar signada en format XAdES-BES (signatura bàsica, _enveloped_) emprant un certificat de signatura reconeguda (nivell 4).<br/>En el cas d&#39;EACAT l&#39;ordre d&#39;inserció no estarà signada i la signatura s&#39;enviarà en un fitxer a banda de tipus signatura (tipus 4). En aquest cas el format de la signatura serà CAdES.<br/>Per més detalls sobre l&#39;estructura del XML consulteu l&#39;apartat 3.1.1.1 d&#39;aquest document.
+ //peticioSolicitudPublicacio/registre | Bloc de dades corresponent a la informació de registre.<br/>Només s&#39;ha d&#39;informar quan la petició procedeix d&#39;EACAT. Per a la resta de sistemes els assentaments es realitzaran automàticament.
 //registre/registreSortida/numero|Número d&#39;assentament de sortida de l&#39;organisme.
 //registre/registreSortida/data|Data d&#39;assentament de sortida de l&#39;organisme.
 //registre/registreEntrada/numero|Número d&#39;assentament d&#39;entrada a l&#39;EADOP.
@@ -86,7 +86,7 @@ El DOGC requereix que tota operació relacionada amb una publicació vagi acompa
 | _Element_ | _Descripció_ |
 | --- | --- |
 //ordreInsercio/document | Bloc de dades corresponent al document a publicar.
-//document/identificador | Codi de document del sistema origen (el mateix que s&#39;informa a l&#39;element peticioSolicitudPublicacio /identificador).  Pels serveis externs a EACAT, aquest identificador haurà de tenir un prefix que identifiqui el servei d&#39;origen. Cal acordar amb el Consorci AOC el prefix que cada requeridor ha d&#39;emprar.
+//document/identificador | Codi de document del sistema origen (el mateix que s&#39;informa a l&#39;element peticioSolicitudPublicacio /identificador).<br/>Pels serveis externs a EACAT, aquest identificador haurà de tenir un prefix que identifiqui el servei d&#39;origen. Cal acordar amb el Consorci AOC el prefix que cada requeridor ha d&#39;emprar.
 //document/titol | Títol del document. Com a mínim s&#39;ha d&#39;informar un títol (en català o castellà).
 //document/idioma | Codi d&#39;idioma:<ul><li>ca\_es: català</li><li>es: castellà</li><li>oc\_es: aranès</li></ul>
 //document/tipus | Tipus de document:<ul><li>009: Resolució</li><li>010: Circular</li><li>011: Edicte</li><li>012: Anunci</li><li>013: Decret de l&#39;Administració local</li><li>015: Correcció d&#39;errades</li><li>018: Instrucció</li><li>019: Acord</li><li>140: Dictamen</li><li>150: Ordenança municipal</li></ul>
@@ -95,8 +95,8 @@ El DOGC requereix que tota operació relacionada amb una publicació vagi acompa
 //document/dadesPersonals | Indica si el document conté dades de caràcter personal (S / N).
 //ordreInsercio/fitxers | Bloc de dades corresponent als fitxers a publicar.
 //ordreInsercio/fitxers/fitxer | Bloc de dades corresponent a un fitxer a publicar.
-//fitxer/identificador | Identificador de document. Únic en la petició. Per identificar cada adjunt, caldrà alinear l&#39;atribut Fichero@Id del bloc de dades genèriques amb l&#39;element identificador de cadascun dels document informats a les dades específiques de la sol·licitud.  En cas de transferència de fitxers adjunts seguint l&#39;estàndard MTOM, cal informar els adjunts en l&#39;element Contenido del bloc de dades genèriques Ficheros destinat a aquest efecte. La grandària màxima de fitxer suportada són 10MB.
-//fitxer/nom | Nom del fitxer. El nom del fitxer no es pot repetir en la mateixa ordre d&#39;inserció. Només s&#39;accepten caràcters alfanumèrics (sense accents) i els caràcters &#39;.&#39;, &#39;-&#39;, &#39;\_&#39; i &#39; &#39;.
+//fitxer/identificador | Identificador de document. Únic en la petició.<br/>Per identificar cada adjunt, caldrà alinear l&#39;atribut Fichero@Id del bloc de dades genèriques amb l&#39;element identificador de cadascun dels document informats a les dades específiques de la sol·licitud.<br/>En cas de transferència de fitxers adjunts seguint l&#39;estàndard MTOM, cal informar els adjunts en l&#39;element Contenido del bloc de dades genèriques Ficheros destinat a aquest efecte.<br/>La grandària màxima de fitxer suportada són 10MB.
+//fitxer/nom | Nom del fitxer. El nom del fitxer no es pot repetir en la mateixa ordre d&#39;inserció.<br/>Només s&#39;accepten caràcters alfanumèrics (sense accents) i els caràcters &#39;.&#39;, &#39;-&#39;, &#39;\_&#39; i &#39; &#39;.
 //fitxer/idioma | Codi d&#39;idioma:<ul><li>ca\_es: català</li><li>es: castellà</li><li>oc\_es: aranès</li></ul>
 //fitxer/tipus | Tipus de fitxer:<ul><li>1: Principal (.doc, .docx i .rtf)</li><li>2: Annex (.doc, .docx i .rtf)</li><li>3: Imatges i PDFs (.pdf, .jpg. tiff)</li><li>4: Fitxer signatura si la petició procedeix d&#39;EACAT.</li></ul>
 //fitxer/ordre | Ordre en que es publicaran els annexos al final del document principal. Obligatori pel tipus de fitxers annex (2).
@@ -122,7 +122,7 @@ El DOGC requereix que tota operació relacionada amb una publicació vagi acompa
 //pagamentTercer/poblacio | Població del pagador. 
 //pagamentTercer/telefon | Telèfon del pagador. 
 //pagamentTercer/correu | Correu electrònic del pagador. 
-//ordreInsercio/condicioPublicacio | Bloc de dades corresponent a les condicions de publicació del document. Per més detalls sobre les condicions de publicació admeses en base al mode de pagament consulteu l&#39;apartat 3.1.1.2 d&#39;aquest document.
+//ordreInsercio/condicioPublicacio | Bloc de dades corresponent a les condicions de publicació del document.<br/>Per més detalls sobre les condicions de publicació admeses en base al mode de pagament consulteu l&#39;apartat 3.1.1.2 d&#39;aquest document.
 //condicioPublicacio/condicio | Condició de publicació:<ul><li>0: en qualsevol data</li><li>1: urgent (només disponible si està exempt de pagament</li><li>2: data concreta (segons element data)</li><li>3: no abans de la data de publicació especificada (a l&#39;element data)</li><li>4: juntament amb un altre document (identificat per identificadorRelacionat)</li><li>5: després d&#39;un altre document (identificat per identificadorRelacionat)</li></ul>
 //condicioPublicacio/identificadorRelacionat | Identificador del document en el sistema origen relacionat. EACAT no realitzarà cap tipus de validació d&#39;existència de les publicacions referenciades.
 //condicioPublicacio/data | Data de condició de publicació.
