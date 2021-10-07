@@ -97,25 +97,17 @@ L&#39;organisme que realitza la publicació s&#39;identifica en l&#39;element de
 
 El DOGC requereix que tota operació relacionada amb una publicació vagi acompanyada d&#39;un XML signat emprant un certificat de signatura reconeguda (nivell 4) amb les dades de la sol·licitud de publicació.
 
-![](RackMultipart20211007-4-7ma4kz_html_4457cf64d0cb965c.gif)
-
 | _Element_ | _Descripció_ |
 | --- | --- |
-| /ordreInsercio/document | Bloc de dades corresponent al document a publicar.
- |
-| --- | --- |
-| //document/identificador | Codi de document del sistema origen (el mateix que s&#39;informa a l&#39;element peticioSolicitudPublicacio /identificador).
+/ordreInsercio/document | Bloc de dades corresponent al document a publicar.
+//document/identificador | Codi de document del sistema origen (el mateix que s&#39;informa a l&#39;element peticioSolicitudPublicacio /identificador).
  Pels serveis externs a EACAT, aquest identificador haurà de tenir un prefix que identifiqui el servei d&#39;origen. Cal acordar amb el Consorci AOC el prefix que cada requeridor ha d&#39;emprar.
- |
-| //document/titol | Títol del document. Com a mínim s&#39;ha d&#39;informar un títol (en català o castellà).
- |
-| //document/idioma | Codi d&#39;idioma:
+//document/titol | Títol del document. Com a mínim s&#39;ha d&#39;informar un títol (en català o castellà).
+//document/idioma | Codi d&#39;idioma:
 - ca\_es: català
 - es: castellà
 - oc\_es: aranès
-
- |
-| //document/tipus | Tipus de document:
+//document/tipus | Tipus de document:
 - 009: Resolució
 - 010: Circular
 - 011: Edicte
@@ -126,108 +118,66 @@ El DOGC requereix que tota operació relacionada amb una publicació vagi acompa
 - 019: Acord
 - 140: Dictamen
 - 150: Ordenança municipal
-
- |
-| //document/observacions | Observacions de l&#39;usuari que publica.
- |
-| //document/data | Data del document a publicar.
- |
-| //document/dadesPersonals | Indica si el document conté dades de caràcter personal (S / N).
- |
-| /ordreInsercio/fitxers
- | Bloc de dades corresponent als fitxers a publicar.
- |
-| /ordreInsercio/fitxers/fitxer
- | Bloc de dades corresponent a un fitxer a publicar.
- |
-| //fitxer/identificador
- | Identificador de document. Únic en la petició.
+//document/observacions | Observacions de l&#39;usuari que publica.
+//document/data | Data del document a publicar.
+//document/dadesPersonals | Indica si el document conté dades de caràcter personal (S / N).
+/ordreInsercio/fitxers | Bloc de dades corresponent als fitxers a publicar.
+/ordreInsercio/fitxers/fitxer | Bloc de dades corresponent a un fitxer a publicar.
+//fitxer/identificador | Identificador de document. Únic en la petició.
  Per identificar cada adjunt, caldrà alinear l&#39;atribut Fichero@Id del bloc de dades genèriques amb l&#39;element identificador de cadascun dels document informats a les dades específiques de la sol·licitud.
  En cas de transferència de fitxers adjunts seguint l&#39;estàndard MTOM, cal informar els adjunts en l&#39;element Contenido del bloc de dades genèriques Ficheros destinat a aquest efecte
-# 1
-.
+# 1.
  La grandària màxima de fitxer suportada són 10MB.
- |
-| //fitxer/nom
- | Nom del fitxer. El nom del fitxer no es pot repetir en la mateixa ordre d&#39;inserció.
+
+//fitxer/nom | Nom del fitxer. El nom del fitxer no es pot repetir en la mateixa ordre d&#39;inserció.
  Només s&#39;accepten caràcters alfanumèrics (sense accents) i els caràcters &#39;.&#39;, &#39;-&#39;, &#39;\_&#39; i &#39; &#39;.
- |
-| //fitxer/idioma
- | Codi d&#39;idioma:
+
+//fitxer/idioma | Codi d&#39;idioma:
 - ca\_es: català
 - es: castellà
 - oc\_es: aranès
 
- |
-| //fitxer/tipus
- | Tipus de fitxer:
+//fitxer/tipus | Tipus de fitxer:
 - 1: Principal (.doc, .docx i .rtf)
 - 2: Annex (.doc, .docx i .rtf)
 - 3: Imatges i PDFs (.pdf, .jpg. tiff)
 - 4: Fitxer signatura si la petició procedeix d&#39;EACAT.
+//fitxer/ordre | Ordre en que es publicaran els annexos al final del document principal. Obligatori pel tipus de fitxers annex (2).
 
- |
-| //fitxer/ordre
- | Ordre en que es publicaran els annexos al final del document principal. Obligatori pel tipus de fitxers annex (2).
- |
-| //fitxer/hash
- | Resum criptogràfic del fitxer adjunt (SHA-1). |
-| /ordreInsercio/usuaris
- | Bloc de dades corresponent a les dades de l&#39;usuari que signa la sol·licitud i el contacte.
- |
-| //usuaris/signadorNom
- | Nom de l&#39;usuari que signa la sol·licitud. |
-| //usuaris/signadorCorreu
- | Correu de l&#39;usuari que signa la sol·licitud. |
-| //usuaris/signadorTelefon
- | Telèfon de l&#39;usuari que signa la sol·licitud. |
-| //usuaris/signadorNIF
- | NIF de l&#39;usuari que signa la sol·licitud. |
-| //usuaris/contacteNom
- | Nom de l&#39;usuari de contacte. |
-| //usuaris/contacteCorreu
- | Correu de l&#39;usuari de contacte. |
-| //usuaris/contacteTelefon
- | Telèfon de l&#39;usuari de contacte. |
-| /ordreInsercio/exempcioPagament
- | Bloc de dades corresponent a la informació de d&#39;exempció de pagament. Cal informar-lo quan l&#39;usuari sol·licita publicar un anunci gratuït.
- |
-| //exempcioPagament/lleiExempcio
- | Identificació de la llei que regula l&#39;exempció del pagament.
- |
-| //exempcioPagament/articleExempcio
- | Identificació de l&#39;article que regula l&#39;exempció del pagament.
- |
-| /ordreInsercio/pagament
- | Bloc de dades corresponent a la informació de pagament.
- |
-| //pagament/taxa | Taxa aplicada:
-- 1: taxa normal.
+//fitxer/hash | Resum criptogràfic del fitxer adjunt (SHA-1).
+/ordreInsercio/usuaris | Bloc de dades corresponent a les dades de l&#39;usuari que signa la sol·licitud i el contacte.
+
+//usuaris/signadorNom | Nom de l&#39;usuari que signa la sol·licitud.
+//usuaris/signadorCorreu | Correu de l&#39;usuari que signa la sol·licitud. |
+//usuaris/signadorTelefon | Telèfon de l&#39;usuari que signa la sol·licitud. |
+//usuaris/signadorNIF | NIF de l&#39;usuari que signa la sol·licitud. |
+//usuaris/contacteNom | Nom de l&#39;usuari de contacte. |
+//usuaris/contacteCorreu | Correu de l&#39;usuari de contacte. |
+//usuaris/contacteTelefon | Telèfon de l&#39;usuari de contacte. |
+/ordreInsercio/exempcioPagament | Bloc de dades corresponent a la informació de d&#39;exempció de pagament. Cal informar-lo quan l&#39;usuari sol·licita publicar un anunci gratuït.
+
+//exempcioPagament/lleiExempcio | Identificació de la llei que regula l&#39;exempció del pagament.
+
+//exempcioPagament/articleExempcio | Identificació de l&#39;article que regula l&#39;exempció del pagament.
+
+/ordreInsercio/pagament | Bloc de dades corresponent a la informació de pagament.
+
+//pagament/taxa | Taxa aplicada:- 1: taxa normal.
 - 2: taxa urgent.
 
- |
-| //pagament/pagamentTercer | Bloc de dades corresponent a la informació de pagament quan el pagament va a càrrec d&#39;un tercer i no de l&#39;organisme que sol·licita la publicació.
- |
-| //pagamentTercer/nom
- | Nom o raó social del pagador. |
-| //pagamentTercer/NIF
- | NIF del pagador. |
-| //pagamentTercer/adreca
- | Adreça del pagador. |
-| //pagamentTercer/codiPostal
- | Codi postal del pagador. |
-| //pagamentTercer/poblacio
- | Població del pagador. |
-| //pagamentTercer/telefon
- | Telèfon del pagador. |
-| //pagamentTercer/correu
- | Correu electrònic del pagador. |
-| /ordreInsercio/condicioPublicacio
- | Bloc de dades corresponent a les condicions de publicació del document.
+//pagament/pagamentTercer | Bloc de dades corresponent a la informació de pagament quan el pagament va a càrrec d&#39;un tercer i no de l&#39;organisme que sol·licita la publicació.
+
+//pagamentTercer/nom | Nom o raó social del pagador. 
+//pagamentTercer/NIF | NIF del pagador. 
+//pagamentTercer/adreca | Adreça del pagador. 
+//pagamentTercer/codiPostal | Codi postal del pagador. 
+//pagamentTercer/poblacio | Població del pagador. 
+//pagamentTercer/telefon | Telèfon del pagador. 
+//pagamentTercer/correu | Correu electrònic del pagador. 
+/ordreInsercio/condicioPublicacio | Bloc de dades corresponent a les condicions de publicació del document.
  Per més detalls sobre les condicions de publicació admeses en base al mode de pagament consulteu l&#39;apartat 3.1.1.2 d&#39;aquest document.
- |
-| //condicioPublicacio/condicio
- | Condició de publicació:
+
+//condicioPublicacio/condicio | Condició de publicació:
 - 0: en qualsevol data
 - 1: urgent (només disponible si està exempt de pagament
 - 2: data concreta (segons element data)
@@ -235,47 +185,33 @@ El DOGC requereix que tota operació relacionada amb una publicació vagi acompa
 - 4: juntament amb un altre document (identificat per identificadorRelacionat)
 - 5: després d&#39;un altre document (identificat per identificadorRelacionat)
 
- |
-| //condicioPublicacio/identificadorRelacionat
- | Identificador del document en el sistema origen relacionat.
+//condicioPublicacio/identificadorRelacionat | Identificador del document en el sistema origen relacionat.
  EACAT no realitzarà cap tipus de validació d&#39;existència de les publicacions referenciades.
- |
-| //condicioPublicacio/data
- | Data de condició de publicació.
- |
-| //boe | Bloc de dades corresponent a la informació específica de publicació al BOE, en cas que també es vulgui publicar l&#39;anunci al Tablón Edictal Único.
- |
-| //boe/dir3
- |
- |
-| //boe/lgt
- | S si l&#39;anunci s&#39;ha de publicar conforme el disposat a l&#39;article 112 de la Ley 58/2003 (Ley General Tributaria).
- |
-| //boe/materia
- | Matèria. Vegeu annex Matèries BOE. |
-| //boe/materia@id
- | Identificador de matèria. Vegeu annex Matèries BOE. |
-| //boe/procediment
- | Text lliure que permet construir de manera automatitzada el títol de l&#39;anunci BOE. No ha de contenir dades de caràcter personal.
+
+//condicioPublicacio/data | Data de condició de publicació.
+
+//boe | Bloc de dades corresponent a la informació específica de publicació al BOE, en cas que també es vulgui publicar l&#39;anunci al Tablón Edictal Único.
+
+//boe/dir3 |
+
+//boe/lgt | S si l&#39;anunci s&#39;ha de publicar conforme el disposat a l&#39;article 112 de la Ley 58/2003 (Ley General Tributaria).
+
+//boe/materia | Matèria. Vegeu annex Matèries BOE. |
+//boe/materia@id | Identificador de matèria. Vegeu annex Matèries BOE. |
+//boe/procediment | Text lliure que permet construir de manera automatitzada el títol de l&#39;anunci BOE. No ha de contenir dades de caràcter personal.
  El títol generat tindrà el següent format:
 [entitat emisora]. Anuncio de notificación de [data] en procedimiento[s] [procediment].
  L&#39;atribut plural (S/N) indicarà si cal emprar-se el plural en la paraula procediment.
  La data que s&#39;emprarà a l&#39;hora de composar el títol de l&#39;anunci és la informada a //document/data.
- |
-| //boe/procediment@plural
- |
-| //boe/formaPublicacio
- | Forma de publicació:
+
+//boe/procediment@plural |
+//boe/formaPublicacio | Forma de publicació:
 - E: extracte
 - I: Íntegra
+//boe/peuSignatura/localitat | Població on té lloc la signatura.
 
- |
-| //boe/peuSignatura/localitat
- | Població on té lloc la signatura.
- |
-| //boe/peuSignatura/signador
- | Càrrec i nom i dos cognoms del signatari. En els casos d&#39;actuació administrativa automatitzada pot consistir únicament en la identificació de l&#39;organisme o unitat signatària. En cas d&#39;alteració de la competència caldrà incloure les referències corresponents.
- |
+//boe/peuSignatura/signador | Càrrec i nom i dos cognoms del signatari. En els casos d&#39;actuació administrativa automatitzada pot consistir únicament en la identificació de l&#39;organisme o unitat signatària. En cas d&#39;alteració de la competència caldrà incloure les referències corresponents.
+
 
 #### 3.1.1.2Condicions de publicació en base al mode de pagament
 
