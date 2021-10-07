@@ -57,35 +57,23 @@ Arxiu: RackMultipart20211007-4-7ma4kz.doc
  |
  |
 
-**Índex**
+# **Índex** #
 
-[1Introducció 1](# __RefHeading___ Toc456607075)
+1. Introducció
+2. Transmissions de dades disponibles
+3. Missatgeria del servei
+   1. Sol·licitud de publicació
+      1. Petició – dades específiques
+      2. Petició – dades genèriques
+      3. Resposta – dades específiques
+   2. Consulta d&#39;estat
+      1. Petició – dades específiques
+      2. Resposta – dades específiques
+   3. Operacions sobre una publicació
+      1. Petició – dades específiques
+      2. Resposta – dades específiques
 
-[2Transmissions de dades disponibles 1](# __RefHeading___ Toc456607076)
-
-[3Missatgeria del servei 1](# __RefHeading___ Toc456607077)
-
-[3.1Sol·licitud de publicació 1](# __RefHeading___ Toc456607078)
-
-[3.1.1Petició – dades específiques 1](# __RefHeading___ Toc456607079)
-
-[3.1.2Petició – dades genèriques 10](# __RefHeading___ Toc456607080)
-
-[3.1.3Resposta – dades específiques 10](# __RefHeading___ Toc456607081)
-
-[3.2Consulta d&#39;estat 11](# __RefHeading___ Toc456607082)
-
-[3.2.1Petició – dades específiques 11](# __RefHeading___ Toc456607083)
-
-[3.2.2Resposta – dades específiques 11](# __RefHeading___ Toc456607084)
-
-[3.3Operacions sobre una publicació 12](# __RefHeading___ Toc456607085)
-
-[3.3.1Petició – dades específiques 12](# __RefHeading___ Toc456607086)
-
-[3.3.2Resposta – dades específiques 14](# __RefHeading___ Toc456607087)
-
-# 1Introducció
+# 1 Introducció
 
 Aquest document detalla la missatgeria associada al servei de publicació del Diari Oficial de la Generalitat de Catalunya (en endavant DOGC).
 
@@ -93,7 +81,7 @@ Per poder realitzar la integració cal conèixer prèviament la següent documen
 
 - Document d&#39;_Especificació de missatgeria pel consum de productes de la plataforma PCI_ del Consorci AOC.
 
-# 2Transmissions de dades disponibles
+# 2 Transmissions de dades disponibles
 
 Les operacions disponibles a través del servei són les que es presenten a continuació:
 
@@ -110,7 +98,7 @@ Les operacions disponibles a través del servei són les que es presenten a cont
  |
 | --- | --- | --- |
 
-# 3Missatgeria del servei
+# 3 Missatgeria del servei
 
 A continuació es detalla la missatgeria corresponent al bloc de dades específiques de les diferents operacions del servei.
 
@@ -119,9 +107,9 @@ A continuació es detalla la missatgeria corresponent al bloc de dades específi
  |
 | --- | --- |
 
-## 3.1Sol·licitud de publicació
+## 3.1 Sol·licitud de publicació
 
-### 3.1.1Petició – dades específiques
+### 3.1.1 Petició – dades específiques
 
 | _Element_ | _Descripció_ |
 | --- | --- |
@@ -149,7 +137,7 @@ A continuació es detalla la missatgeria corresponent al bloc de dades específi
 
 ![](RackMultipart20211007-4-7ma4kz_html_9b7d91a13abaa108.gif)
 
-#### 3.1.1.1Ordre d&#39;inserció
+#### 3.1.1.1 Ordre d&#39;inserció
 
 El DOGC requereix que tota operació relacionada amb una publicació vagi acompanyada d&#39;un XML signat emprant un certificat de signatura reconeguda (nivell 4) amb les dades de la sol·licitud de publicació.
 
