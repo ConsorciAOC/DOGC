@@ -87,6 +87,10 @@ L&#39;organisme que realitza la publicació s&#39;identifica en l&#39;element de
 
 El DOGC requereix que tota operació relacionada amb una publicació vagi acompanyada d&#39;un XML signat emprant un certificat de signatura reconeguda (nivell 4) amb les dades de la sol·licitud de publicació.
 
+<p align="center">
+<img align="center" src="img/ordreInsercio.png" />
+</p>
+
 | _Element_ | _Descripció_ |
 | --- | --- |
 //ordreInsercio/document | Bloc de dades corresponent al document a publicar.
@@ -179,6 +183,10 @@ _Ordre d&#39;insercio signada (exemple)_
 //respostaSolicitudPublicacio/resultat/codiResultat | Codi de resultat de l&#39;operació: <ul><li>0: publicació enviada correctament</li><li>1: manquen dades o alguna dada conté valors incorrectes</li><li>2: sol·licitud duplicada</li><li>502: error en el tractament de la publicació</li></ul>
 //respostaSolicitudPublicacio/resultat/descripcio | Descripció del resultat.
 
+<p align="center">
+<img align="center" src="img/solicitudPublicacioResposta.png" />
+</p>
+
 ## 3.2 Consulta d&#39;estat
 
 ### 3.2.1 Petició – dades específiques
@@ -187,7 +195,15 @@ _Ordre d&#39;insercio signada (exemple)_
 | --- | --- |
 //peticioConsultaEstatPublicacio/codiSolicitud | Codi de sol·licitud DOGC que identifica la publicació.
 
+<p align="center">
+<img align="center" src="img/consultaEstatPeticio.png" />
+</p>
+
 ### 3.2.2 Resposta – dades específiques
+
+<p align="center">
+<img align="center" src="img/consultaEstatResposta.png" />
+</p>
 
 | _Element_ | _Descripció_ |
 | --- | --- |
@@ -208,6 +224,10 @@ _Ordre d&#39;insercio signada (exemple)_
 //peticioOperacioPublicacio/codiSolicitud | Codi de sol·licitud DOGC que identifica la publicació.
 //peticioOperacioPublicacio/operacio | Codi d&#39;operació:<ul><li>2: Aturar publicació</li><li>3: Reprendre publicació</li><li>4: Desistiment de publicació</li></ul>
 //peticioOperacioPublicacio/ordreOperacio | XML codificat en Base64 corresponent a l&#39;ordre de sol·licitud d&#39;operació sobre un determinat document.<br/>L&#39;ordre d&#39;inserció ha d&#39;estar signada en format XAdES-BES (signatura bàsica, _enveloped_) emprant un certificat de signatura reconeguda (nivell 4).
+
+<p align="center">
+<img align="center" src="img/operacioSobreUnaAplicacioPeticio.png" />
+</p>
 
 #### 3.3.1.1 Ordres signades de sol·licitud d&#39;operació
 
@@ -230,13 +250,78 @@ L&#39;usuari amb DNI \&lt;DNI\&gt; demana realitzar l&#39;operació (Atura publi
 //peticioOperacioPublicacio/resultat/codiResultat | Codi de resultat de l&#39;operació:<ul><li>0: operació realitzada correctament</li><li>1: manquen dades o alguna dada conté valors incorrectes</li><li>3: codi de sol·licitud invàlida</li><li>4: fitxer de signatura invàlid</li><li>5: operació invàlida (p.e. no es pot aturar una sol·licitud ja aturada o reprendre una sol·licitud no aturada)</li><li>6: fitxers enviats no es poden processar</li><li>7: l&#39;operació ha d&#39;estar signada</li><li>502: error genèric realitzant l&#39;operació</li></ul>
 //peticioOperacioPublicacio/resultat/descripcio | Descripció del resultat de la consulta.
 
+<p align="center">
+<img align="center" src="img/operacioSobreUnaAplicacioResposta.png" />
+</p>
+
+
 **Annex – exemple de missatges**
 
 Exemple de missatge amb el contingut del fitxer adjunts optimitzat seguint l&#39;estàndard MTOM (s&#39;obvien capçaleres HTTP i missatge SOAP).
 
 | _Exemple petició_ |
 | --- |
-\&lt;Peticion xmlns=&quot;http://gencat.net/scsp/esquemes/peticion&quot;\&gt; \&lt;Atributos\&gt; \&lt;IdPeticion\&gt;CU1-DOGC-1331725182868\&lt;/IdPeticion\&gt; \&lt;NumElementos\&gt;1\&lt;/NumElementos\&gt; \&lt;TimeStamp/\&gt; \&lt;CodigoCertificado\&gt;DOGC\&lt;/CodigoCertificado\&gt; \&lt;CodigoProducto\&gt;DOGC\&lt;/CodigoProducto\&gt; \&lt;IdSolicitanteOriginal\&gt;9821920002\&lt;/IdSolicitanteOriginal\&gt; \&lt;DatosAutorizacion\&gt; \&lt;IdentificadorSolicitante\&gt;9821920002\&lt;/IdentificadorSolicitante\&gt; \&lt;NombreSolicitante\&gt;Consorci AOC\&lt;/NombreSolicitante\&gt; \&lt;Finalidad\&gt;ADMINELEC\&lt;/Finalidad\&gt; \&lt;/DatosAutorizacion\&gt; \&lt;Funcionario\&gt; \&lt;NombreCompletoFuncionario\&gt;FUNCIONARI\&lt;/NombreCompletoFuncionario\&gt; \&lt;NifFuncionario\&gt;NIF\&lt;/NifFuncionario\&gt; \&lt;/Funcionario\&gt; \&lt;/Atributos\&gt; \&lt;Solicitudes\&gt; \&lt;SolicitudTransmision\&gt; \&lt;DatosGenericos\&gt; \&lt;Solicitante\&gt; \&lt;IdentificadorSolicitante\&gt;9821920002\&lt;/IdentificadorSolicitante\&gt; \&lt;NombreSolicitante\&gt;Consorci AOC\&lt;/NombreSolicitante\&gt; \&lt;Finalidad\&gt;ADMINELEC\&lt;/Finalidad\&gt; \&lt;Consentimiento\&gt;Si\&lt;/Consentimiento\&gt; \&lt;Funcionario\&gt; \&lt;NombreCompletoFuncionario\&gt;FUNCIONARI\&lt;/NombreCompletoFuncionario\&gt; \&lt;NifFuncionario\&gt;NIF\&lt;/NifFuncionario\&gt; \&lt;/Funcionario\&gt; \&lt;/Solicitante\&gt; \&lt;Transmision\&gt; \&lt;CodigoCertificado\&gt;DOGC\&lt;/CodigoCertificado\&gt; \&lt;IdSolicitud\&gt;1\&lt;/IdSolicitud\&gt; \&lt;IdTransmision\&gt;NUM EXPEDIENT\&lt;/IdTransmision\&gt; \&lt;/Transmision\&gt; \&lt;Ficheros\&gt; \&lt;Fichero\&gt; \&lt;NombreFichero\&gt;Anunci.doc\&lt;/NombreFichero\&gt; \&lt;Contenido\&gt; \&lt;inc:Include href=&quot;cid:adjunt-dogc&quot;xmlns:inc=&quot;http://www.w3.org/2004/08/xop/include&quot;/\&gt; \&lt;/Contenido\&gt; \&lt;Id\&gt;1\&lt;/Id\&gt; \&lt;Via\&gt;Entrada\&lt;/Via\&gt; \&lt;/Fichero\&gt; \&lt;/Ficheros\&gt; \&lt;/DatosGenericos\&gt; \&lt;DatosEspecificos\&gt; \&lt;peticioSolicitudPublicacio xmlns=&quot;http://www.aoc.cat/dogc/tramesa&quot;\&gt; \&lt;identificador\&gt;1\&lt;/identificador\&gt; \&lt;ordreInsercio\&gt;PG9yZHJlSW5zZXJjaW8geG1sbnMjYyMDQzOTwvZHMcm9wZXJ0aWVzPjwvZHM6T2JqZWN0Pgo8L(. . .)2RzOlNpZ25hdHVyZT48L29yZHJlSW5zZXJjaW8+\&lt;/ordreInsercio\&gt; \&lt;/peticioSolicitudPublicacio\&gt; \&lt;/DatosEspecificos\&gt; \&lt;/SolicitudTransmision\&gt; \&lt;/Solicitudes\&gt;\&lt;/Peticion\&gt;
+<Peticion xmlns="http://gencat.net/scsp/esquemes/peticion">
+	<Atributos>
+		<IdPeticion>CU1-DOGC-1331725182868</IdPeticion>
+		<NumElementos>1</NumElementos>
+		<TimeStamp/>
+		<CodigoCertificado>DOGC</CodigoCertificado>
+		<CodigoProducto>DOGC</CodigoProducto>
+		<IdSolicitanteOriginal>9821920002</IdSolicitanteOriginal>
+		<DatosAutorizacion>
+			<IdentificadorSolicitante>9821920002</IdentificadorSolicitante>
+			<NombreSolicitante>Consorci AOC</NombreSolicitante>
+			<Finalidad>ADMINELEC</Finalidad>
+		</DatosAutorizacion>
+		<Funcionario>
+			<NombreCompletoFuncionario>FUNCIONARI</NombreCompletoFuncionario>
+			<NifFuncionario>NIF</NifFuncionario>
+		</Funcionario>
+	</Atributos>
+	<Solicitudes>
+		<SolicitudTransmision>
+			<DatosGenericos>
+				<Solicitante>
+					<IdentificadorSolicitante>9821920002</IdentificadorSolicitante>
+					<NombreSolicitante>Consorci AOC</NombreSolicitante>
+					<Finalidad>ADMINELEC</Finalidad>
+					<Consentimiento>Si</Consentimiento>
+					<Funcionario>
+						<NombreCompletoFuncionario>FUNCIONARI</NombreCompletoFuncionario>
+						<NifFuncionario>NIF</NifFuncionario>
+					</Funcionario>
+				</Solicitante>
+				<Transmision>
+					<CodigoCertificado>DOGC</CodigoCertificado>
+					<IdSolicitud>1</IdSolicitud>
+					<IdTransmision>NUM EXPEDIENT</IdTransmision>
+				</Transmision>
+				<Ficheros>
+					<Fichero>
+						<NombreFichero>Anunci.doc</NombreFichero>
+						<Contenido>
+							<inc:Include href="cid:adjunt-dogc"
+                        xmlns:inc="http://www.w3.org/2004/08/xop/include"/>
+						</Contenido>
+						<Id>1</Id>
+						<Via>Entrada</Via>
+					</Fichero>
+				</Ficheros>
+			</DatosGenericos>
+			<DatosEspecificos>
+				<peticioSolicitudPublicacio xmlns="http://www.aoc.cat/dogc/tramesa">
+					<identificador>1</identificador>
+					<ordreInsercio>
+                 PG9yZHJlSW5zZXJjaW8geG1sbnMjYyMDQzOTwvZHMcm9wZXJ0aWVzPjwvZHM6T2JqZWN0Pgo8L
+                 (. . .)
+                 2RzOlNpZ25hdHVyZT48L29yZHJlSW5zZXJjaW8+
+					</ordreInsercio>
+				</peticioSolicitudPublicacio>
+			</DatosEspecificos>
+		</SolicitudTransmision>
+	</Solicitudes>
+</Peticion>
 
 **Annex – matèries BOE**
 
