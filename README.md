@@ -262,7 +262,7 @@ Exemple de missatge amb el contingut del fitxer adjunts optimitzat seguint l&#39
 
 | _Exemple petició_ |
 | --- |
-```
+```XML
    <Peticion xmlns="http://gencat.net/scsp/esquemes/peticion">
       <Atributos>
          <IdPeticion>CU1-DOGC-1331725182868</IdPeticion>
