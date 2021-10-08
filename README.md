@@ -1,3 +1,4 @@
+# Via Oberta – DOGC
 Documentació d'integració del servei DOGC del Consorci AOC.
 
 **Control del document**
@@ -6,37 +7,37 @@ Documentació d'integració del servei DOGC del Consorci AOC.
 
 | **Títol:** | Diari Oficial de la Generalitat de Catalunya. Document d&#39;integració del servei |
 | --- | --- |
-| **Creat per:** | Departament d&#39;Operacions – Unitat de Projectes |
-| **A revisar per:** | Departament d&#39;Operacions – Suport a Integracions |
-| **A aprovar per:** | Departament d&#39;Operacions – Suport a Integracions |
-| **Llista de distribució:** |
-| **Nom del document:** | DI - DOGC.doc |
+**Creat per:** | Departament d&#39;Operacions – Unitat de Projectes
+**A revisar per:** | Departament d&#39;Operacions – Suport a Integracions
+**A aprovar per:** | Departament d&#39;Operacions – Suport a Integracions
+**Llista de distribució:**
+**Nom del document:** | DI - DOGC.doc
 
 **Històric de revisions**
 
 | **Versió** | **Data** | **Autor** | **Comentaris** |
 | --- | --- | --- | --- |
-| V1.0 | 18/06/2012 | Roger Noguera i Arnau | Creació del document. |
-| V1.1 | 02/04/2014 | Roger Noguera i Arnau | Adaptació a canvis en els serveis del DOGC |
-| V2.0 | 18/07/2016 | Roger Noguera i Arnau | Suport de publicació al TEU del BOE via DOGC. |
+V1.0 | 18/06/2012 | Roger Noguera i Arnau | Creació del document.
+V1.1 | 02/04/2014 | Roger Noguera i Arnau | Adaptació a canvis en els serveis del DOGC.
+V2.0 | 18/07/2016 | Roger Noguera i Arnau | Suport de publicació al TEU del BOE via DOGC.
 
 # **Índex** #
 
-1. Introducció
-2. Transmissions de dades disponibles
-3. Missatgeria del servei
-   1. Sol·licitud de publicació
-      1. Petició – dades específiques
-      2. Petició – dades genèriques
-      3. Resposta – dades específiques
-   2. Consulta d&#39;estat
-      1. Petició – dades específiques
-      2. Resposta – dades específiques
-   3. Operacions sobre una publicació
-      1. Petició – dades específiques
-      2. Resposta – dades específiques
+1. [Introducció](#1)
+2. [Transmissions de dades disponibles](#2)
+3. [Missatgeria del servei](#3)
+   1. [Sol·licitud de publicació](#3.1)
+      1. [Petició – dades específiques](#3.1.1)
+      2. [Petició – dades genèriques](#3.1.2)
+      3. [Resposta – dades específiques](#3.1.3)
+   2. [Consulta d&#39;estat](#3.2)
+      1. [Petició – dades específiques](#3.2.1)
+      2. [Resposta – dades específiques](#3.2.2)
+   3. [Operacions sobre una publicació](#3.3)
+      1. [Petició – dades específiques](#3.3.1)
+      2. [Resposta – dades específiques](#3.3.2)
 
-# 1 Introducció
+# 1 Introducció <a name="1"></a>
 
 Aquest document detalla la missatgeria associada al servei de publicació del Diari Oficial de la Generalitat de Catalunya (en endavant DOGC).
 
@@ -44,7 +45,7 @@ Per poder realitzar la integració cal conèixer prèviament la següent documen
 
 - Document d&#39;_Especificació de missatgeria pel consum de productes de la plataforma PCI_ del Consorci AOC.
 
-# 2 Transmissions de dades disponibles
+# 2 Transmissions de dades disponibles <a name="2"></a>
 
 Les operacions disponibles a través del servei són les que es presenten a continuació:
 
@@ -58,16 +59,16 @@ Les operacions disponibles a través del servei són les que es presenten a cont
 - Consulta d&#39;estat d&#39;una publicació
 - Realitzar operacions sobre una publicació
 
-# 3 Missatgeria del servei
+# 3 Missatgeria del servei <a name="3"></a>
 
 A continuació es detalla la missatgeria corresponent al bloc de dades específiques de les diferents operacions del servei.
 
 L&#39;organisme que realitza la publicació s&#39;identifica en l&#39;element de la missatgeria genèrica DatosAutorizacion/IdentificadorSolicitante.
  En cas que la integració es realitzi via una plataforma intermediària – **com en el cas de la PCSP** - caldrà informar el codi INE10 de l&#39;organisme emissor del document a l&#39;element IdSolicitanteOriginal.
 
-## 3.1 Sol·licitud de publicació
+## 3.1 Sol·licitud de publicació <a name="3.1"></a>
 
-### 3.1.1 Petició – dades específiques
+### 3.1.1 Petició – dades específiques <a name="3.1.1"></a>
 
 | _Element_ | _Descripció_ |
 | --- | --- |
@@ -158,7 +159,7 @@ _Ordre d&#39;insercio signada (exemple)_
 \&lt;ordreInsercio xmlns=&quot;http://www.aoc.cat/dogc&quot;\&gt; \&lt;document\&gt; \&lt;identificador\&gt;ID-1\&lt;/identificador\&gt; \&lt;titol\&gt; \&lt;titol\&gt;Títol en català\&lt;/titol\&gt; \&lt;idioma\&gt;ca\_es\&lt;/idioma\&gt; \&lt;/titol\&gt; \&lt;tipus\&gt;009\&lt;/tipus\&gt; \&lt;observacions\&gt;Observacions\&lt;/observacions\&gt; \&lt;data\&gt;2012-08-08\&lt;/data\&gt; \&lt;dadesPersonals\&gt;N\&lt;/dadesPersonals\&gt; \&lt;/document\&gt; \&lt;fitxers\&gt; \&lt;fitxer\&gt; \&lt;identificador\&gt;fitxer-1\&lt;/identificador\&gt; \&lt;nom\&gt;principal.doc\&lt;/nom\&gt; \&lt;idioma\&gt;ca\_es\&lt;/idioma\&gt; \&lt;tipus\&gt;1\&lt;/tipus\&gt; \&lt;hash\&gt;dsdasad=\&lt;/hash\&gt; \&lt;/fitxer\&gt; \&lt;fitxer\&gt; \&lt;identificador\&gt;fitxer-2\&lt;/identificador\&gt; \&lt;nom\&gt;annex1.doc\&lt;/nom\&gt; \&lt;idioma\&gt;ca\_es\&lt;/idioma\&gt; \&lt;tipus\&gt;2\&lt;/tipus\&gt; \&lt;ordre\&gt;1\&lt;/ordre\&gt; \&lt;hash\&gt;dsdasad=\&lt;/hash\&gt; \&lt;/fitxer\&gt; \&lt;fitxer\&gt; \&lt;identificador\&gt;fitxer-3\&lt;/identificador\&gt; \&lt;nom\&gt;annex2.doc\&lt;/nom\&gt; \&lt;idioma\&gt;ca\_es\&lt;/idioma\&gt; \&lt;tipus\&gt;2\&lt;/tipus\&gt; \&lt;ordre\&gt;2\&lt;/ordre\&gt; \&lt;hash\&gt;dsdasad=\&lt;/hash\&gt; \&lt;/fitxer\&gt; \&lt;fitxer\&gt; \&lt;identificador\&gt;fitxer-4\&lt;/identificador\&gt; \&lt;nom\&gt;imatge.jpg\&lt;/nom\&gt; \&lt;idioma\&gt;ca\_es\&lt;/idioma\&gt; \&lt;tipus\&gt;3\&lt;/tipus\&gt; \&lt;hash\&gt;dsdasad=\&lt;/hash\&gt; \&lt;/fitxer\&gt; \&lt;fitxer\&gt; \&lt;identificador\&gt;fitxer-5\&lt;/identificador\&gt; \&lt;nom\&gt;pdf.pdf\&lt;/nom\&gt; \&lt;idioma\&gt;ca\_es\&lt;/idioma\&gt; \&lt;tipus\&gt;3\&lt;/tipus\&gt; \&lt;hash\&gt;dsdasad=\&lt;/hash\&gt; \&lt;/fitxer\&gt; \&lt;/fitxers\&gt; \&lt;usuaris\&gt; \&lt;signadorNom\&gt;Usuari signador\&lt;/signadorNom\&gt; \&lt;signadorCorreu\&gt;rnoguera@aoc.cat\&lt;/signadorCorreu\&gt; \&lt;signadorTelefon\&gt;935555555\&lt;/signadorTelefon\&gt; \&lt;signadorNIF\&gt;11111111H\&lt;/signadorNIF\&gt; \&lt;contacteNom\&gt;Usuari contacte\&lt;/contacteNom\&gt; \&lt;contacteCorreu\&gt;rnoguera@aoc.cat\&lt;/contacteCorreu\&gt; \&lt;contacteTelefon\&gt;935555555\&lt;/contacteTelefon\&gt; \&lt;/usuaris\&gt; \&lt;exempcioPagament\&gt; \&lt;llei\&gt;Llei\&lt;/llei\&gt; \&lt;article\&gt;Article\&lt;/article\&gt; \&lt;/exempcioPagament\&gt; \&lt;condicioPublicacio\&gt; \&lt;condicio\&gt;0\&lt;/condicio\&gt; \&lt;/condicioPublicacio\&gt; \&lt;ds:Signature xmlns:ds=&quot;http://www.w3.org/2000/09/xmldsig#&quot; Id=&quot;Signature&quot;\&gt; \&lt;ds:SignedInfo Id=&quot;SignedInfo&quot;\&gt; \&lt;ds:CanonicalizationMethod Algorithm=&quot;http://www.w3.org/TR/2001/REC-xml-c14n-20010315&quot;/\&gt; \&lt;ds:SignatureMethod Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#rsa-sha1&quot;/\&gt; \&lt;ds:Reference Id=&quot;SignedDataObject-enveloped&quot; URI=&quot;&quot;\&gt; \&lt;ds:Transforms\&gt; \&lt;ds:TransformAlgorithm=&quot;http://www.w3.org/2000/09/xmldsig#enveloped-signature&quot;/\&gt; \&lt;ds:TransformAlgorithm=&quot;http://www.w3.org/TR/2001/REC-xml-c14n-20010315&quot;/\&gt; \&lt;/ds:Transforms\&gt; \&lt;ds:DigestMethod Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#sha1&quot;/\&gt; \&lt;ds:DigestValue\&gt;XYopNgTlR1RtxfwvyynUxZ3ZiO0=\&lt;/ds:DigestValue\&gt; \&lt;/ds:Reference\&gt; \&lt;ds:Reference Id=&quot;SignedProperties-Reference&quot; Type=&quot;http://uri.etsi.org/01903/v1.2.2#SignedProperties&quot; URI=&quot;#SignedProperties&quot;\&gt; \&lt;ds:DigestMethod Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#sha1&quot;/\&gt; \&lt;ds:DigestValue\&gt;OLxDVVEwNJjGs5+STyKvIMXvMZ8=\&lt;/ds:DigestValue\&gt; \&lt;/ds:Reference\&gt; \&lt;/ds:SignedInfo\&gt; \&lt;ds:SignatureValue Id=&quot;DocumentSignatureValue&quot;\&gt;d65yEmuBrgfRLyNvC3SGHk0OKkzZPqFlqAByEFUIzeC8qK9SEGq/TN6IDu/nXQX1+Qgsn5eRiUNA(...)gY9vQBCmGYYPeaHTpxZQxpOCDyX6Pf9BtiPgKQ==\&lt;/ds:SignatureValue\&gt; \&lt;ds:KeyInfo Id=&quot;KeyInfo&quot;\&gt; \&lt;ds:X509Data\&gt; \&lt;ds:X509Certificate\&gt;MIIJIzCCCAugAwIBAgIQe+npPzpsnlNOZJA76B//lzANBgkqhkiG9w0BAQUFADCCATExCzAJBgNV(...)FgdCb7SaQuJzUFR6lXNmouGxdszz6KfGsnaISSmBzPndYfINJY8t9nddQ7nAU+Mcn8F7MEXUpsyvled9s2p7\&lt;/ds:X509Certificate\&gt; \&lt;/ds:X509Data\&gt; \&lt;ds:KeyValue\&gt; \&lt;ds:RSAKeyValue\&gt; \&lt;ds:Modulus\&gt;lINpwmN7jj2L+tljm9FIvhY4S6GuaoLsl4DlFFWiuHV/piQVc2BB2befITM1HYaFf208IWUo97sZ(...)WPHl7D/R47rTiKBwiRWmzSPhG/BB/Y+yb6NaZMpLy7dgz3b3cc51jSGi7ijp0KrQb/r8JlKir1wXEm2+0Jtn8EpeJgB0bTjwE1M2wdECf5Vy6N/EdQ==\&lt;/ds:Modulus\&gt; \&lt;ds:Exponent\&gt;AQAB\&lt;/ds:Exponent\&gt; \&lt;/ds:RSAKeyValue\&gt; \&lt;/ds:KeyValue\&gt; \&lt;/ds:KeyInfo\&gt; \&lt;ds:Object\&gt; \&lt;xades:QualifyingProperties xmlns:xades=&quot;http://uri.etsi.org/01903/v1.2.2#&quot; Id=&quot;QualifyingProperties&quot; Target=&quot;#Signature&quot;\&gt; \&lt;xades:SignedProperties Id=&quot;SignedProperties&quot;\&gt; \&lt;xades:SignedSignatureProperties\&gt; \&lt;xades:SigningTime\&gt;2012-08-14T11:58:42.848Z\&lt;/xades:SigningTime\&gt; \&lt;xades:SigningCertificate\&gt; \&lt;xades:Cert\&gt; \&lt;xades:CertDigest\&gt; \&lt;ds:DigestMethod Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#sha1&quot;/\&gt; \&lt;ds:DigestValue\&gt;2C27TbSPoWPmSsmNj93SRmD6/bM=\&lt;/ds:DigestValue\&gt; \&lt;/xades:CertDigest\&gt; \&lt;xades:IssuerSerial\&gt; \&lt;ds:X509IssuerName\&gt;CN=EC-SAFP,OU=Secretaria d&#39;Administracio i Funcio Publica,OU=Vegeu https://www.catcert.net/verCIC-2 (c)03,OU=Serveis Publics de Certificacio ECV-2,L=Passatge de la Concepcio 11 08008 Barcelona,O=Agencia Catalana de Certificacio (NIF Q-0801176-I),C=ES\&lt;/ds:X509IssuerName\&gt; \&lt;ds:X509SerialNumber\&gt;164709579460476598671267166040352620439\&lt;/ds:X509SerialNumber\&gt; \&lt;/xades:IssuerSerial\&gt; \&lt;/xades:Cert\&gt; \&lt;/xades:SigningCertificate\&gt; \&lt;/xades:SignedSignatureProperties\&gt; \&lt;xades:SignedDataObjectProperties/\&gt; \&lt;/xades:SignedProperties\&gt; \&lt;/xades:QualifyingProperties\&gt; \&lt;/ds:Object\&gt;\&lt;/ds:Signature\&gt;\&lt;/ordreInsercio\&gt; |
 | --- |
 
-### 3.1.2 Petició – dades genèriques
+### 3.1.2 Petició – dades genèriques <a name="3.1.2"></a>
 
 #### Per cada document referenciat a la sol·licitud de publicació cal informar un bloc de dades //Ficheros/Fichero de les dades genèriques de la sol·licitud.
 
@@ -170,7 +171,7 @@ _Ordre d&#39;insercio signada (exemple)_
 //Ficheros/Fichero/Id | Identificador de fitxer únic en la petició i referenciat a l&#39;ordre d&#39;inserció.
 
 
-### 3.1.3 Resposta – dades específiques
+### 3.1.3 Resposta – dades específiques <a name="3.1.3"></a>
 
 | _Element_ | _Descripció_ |
 | --- | --- |
@@ -187,9 +188,9 @@ _Ordre d&#39;insercio signada (exemple)_
 <img align="center" src="img/solicitudPublicacioResposta.png" />
 </p>
 
-## 3.2 Consulta d&#39;estat
+## 3.2 Consulta d&#39;estat <a name="3.2"></a>
 
-### 3.2.1 Petició – dades específiques
+### 3.2.1 Petició – dades específiques <a name="3.2.1"></a>
 
 | _Element_ | _Descripció_ |
 | --- | --- |
@@ -199,7 +200,7 @@ _Ordre d&#39;insercio signada (exemple)_
 <img align="center" src="img/consultaEstatPeticio.png" />
 </p>
 
-### 3.2.2 Resposta – dades específiques
+### 3.2.2 Resposta – dades específiques <a name="3.2.2"></a>
 
 <p align="center">
 <img align="center" src="img/consultaEstatResposta.png" />
@@ -215,9 +216,9 @@ _Ordre d&#39;insercio signada (exemple)_
 //respostaConsultaEstatPublicacio/resultat/codiResultat | Codi de resultat de la consulta:<ul><li>0: consulta realitzada correctament</li><li>502: error realitzant la consulta</li></ul>
 /respostaConsultaEstatPublicacio/resultat/descripcio | Descripció del resultat de la consulta.
 
-## 3.3 Operacions sobre una publicació
+## 3.3 Operacions sobre una publicació <a name="3.3"></a>
 
-### 3.3.1 Petició – dades específiques
+### 3.3.1 Petició – dades específiques <a name="3.3.1"></a>
 
 | _Element_ | _Descripció_ |
 | --- | --- |
@@ -242,7 +243,7 @@ L&#39;usuari amb DNI \&lt;DNI\&gt; demana realitzar l&#39;operació (Atura publi
 \&lt;ordreOperacio xmlns=&quot;http://www.aoc.cat/dogc&quot;\&gt;\&lt;missatge\&gt;L&#39;usuari amb DNI 11111111H demana realitzar l&#39;operació Atura publicaciósobre la sol.licitud de publicació al DOGC amb identificador 10.145.006.\&lt;/missatge\&gt;\&lt;ds:Signature xmlns:ds=&quot;http://www.w3.org/2000/09/xmldsig#&quot; Id=&quot;Signature&quot;\&gt;\&lt;ds:SignedInfo Id=&quot;SignedInfo&quot;\&gt;\&lt;ds:CanonicalizationMethodAlgorithm=&quot;http://www.w3.org/TR/2001/REC-xml-c14n-20010315&quot;/\&gt;\&lt;ds:SignatureMethod Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#rsa-sha1&quot;/\&gt;\&lt;ds:Reference Id=&quot;SignedDataObject-enveloped&quot; URI=&quot;&quot;\&gt;\&lt;ds:Transforms\&gt;\&lt;ds:Transform Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#enveloped-signature&quot;/\&gt;\&lt;ds:Transform Algorithm=&quot;http://www.w3.org/TR/2001/REC-xml-c14n-20010315&quot;/\&gt;\&lt;/ds:Transforms\&gt;\&lt;ds:DigestMethod Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#sha1&quot;/\&gt;\&lt;ds:DigestValue\&gt;TJKv76MFPS59Me/iPCDEMWAq4As=\&lt;/ds:DigestValue\&gt;\&lt;/ds:Reference\&gt;\&lt;ds:Reference Id=&quot;SignedProperties-Reference&quot;Type=&quot;http://uri.etsi.org/01903/v1.2.2#SignedProperties&quot; URI=&quot;#SignedProperties&quot;\&gt;\&lt;ds:DigestMethod Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#sha1&quot;/\&gt;\&lt;ds:DigestValue\&gt;YMI9rXPH1XgWHUFoccQe9f9Rz54=\&lt;/ds:DigestValue\&gt;\&lt;/ds:Reference\&gt;\&lt;/ds:SignedInfo\&gt;\&lt;ds:SignatureValue Id=&quot;DocumentSignatureValue&quot;\&gt;NYkyv+0QH0onlad35S26ya0GW9/ojOWzxCHwpPQ1/+IJOHQJQ1joxeZfWjCJAFLDC4D6NNZfFlUV(. . .)UUd1IWXVtDsDzIIhZr7FQiHn311jn+hy1kfOYg==\&lt;/ds:SignatureValue\&gt;\&lt;ds:KeyInfo Id=&quot;KeyInfo&quot;\&gt;\&lt;ds:X509Data\&gt;\&lt;ds:X509Certificate\&gt;MIIJIzCCCAugAwIBAgIQe+npPzpsnlNOZJA76B//lzANBgkqhkiG9w0BAQUFADCCATExCzAJBgNVBAYTAkVTMTswOQYDVQQKEzJBZ2VuY2lhIENhdGFsYW5hIGRlIENlcnRpZmljYWNpbyAoTklGIFEt(. . .)FgdCb7SaQuJzUFR6lXNmouGxdszz6KfGsnaISSmBzPndYfINJY8t9nddQ7nAU+Mcn8F7MEXUpsyvled9s2p7\&lt;/ds:X509Certificate\&gt;\&lt;/ds:X509Data\&gt;\&lt;ds:KeyValue\&gt;\&lt;ds:RSAKeyValue\&gt;\&lt;ds:Modulus\&gt;lINpwmN7jj2L+tljm9FIvhY4S6GuaoLsl4DlFFWiuHV/piQVc2BB2befITM1HYaFf208IWUo97sZ(. . .)Em2+0Jtn8EpeJgB0bTjwE1M2wdECf5Vy6N/EdQ==\&lt;/ds:Modulus\&gt;\&lt;ds:Exponent\&gt;AQAB\&lt;/ds:Exponent\&gt;\&lt;/ds:RSAKeyValue\&gt;\&lt;/ds:KeyValue\&gt;\&lt;/ds:KeyInfo\&gt;\&lt;ds:Object\&gt;\&lt;xades:QualifyingProperties xmlns:xades=&quot;http://uri.etsi.org/01903/v1.2.2#&quot;Id=&quot;QualifyingProperties&quot; Target=&quot;#Signature&quot;\&gt;\&lt;xades:SignedProperties Id=&quot;SignedProperties&quot;\&gt;\&lt;xades:SignedSignatureProperties\&gt;\&lt;xades:SigningTime\&gt;2012-06-21T09:25:18.869Z\&lt;/xades:SigningTime\&gt;\&lt;xades:SigningCertificate\&gt;\&lt;xades:Cert\&gt;\&lt;xades:CertDigest\&gt;\&lt;ds:DigestMethod Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#sha1&quot;/\&gt;\&lt;ds:DigestValue\&gt;2C27TbSPoWPmSsmNj93SRmD6/bM=\&lt;/ds:DigestValue\&gt;\&lt;/xades:CertDigest\&gt;\&lt;xades:IssuerSerial\&gt;\&lt;ds:X509IssuerName\&gt;CN=EC-SAFP,OU=Secretaria d&#39;Administracio i Funcio Publica,OU=Vegeu https://www.catcert.net/verCIC-2 (c)03,OU=Serveis Publics de Certificacio ECV-2,L=Passatge de la Concepcio 11 08008 Barcelona,O=Agencia Catalana de Certificacio (NIF Q-0801176-I),C=ES\&lt;/ds:X509IssuerName\&gt;\&lt;ds:X509SerialNumber\&gt;1647095(. . .)794604\&lt;/ds:X509SerialNumber\&gt;\&lt;/xades:IssuerSerial\&gt;\&lt;/xades:Cert\&gt;\&lt;/xades:SigningCertificate\&gt;\&lt;/xades:SignedSignatureProperties\&gt;\&lt;xades:SignedDataObjectProperties/\&gt;\&lt;/xades:SignedProperties\&gt;\&lt;/xades:QualifyingProperties\&gt;\&lt;/ds:Object\&gt;\&lt;/ds:Signature\&gt;\&lt;/ordreOperacio\&gt; |
 | --- |
 
-### 3.3.2 Resposta – dades específiques
+### 3.3.2 Resposta – dades específiques <a name="3.3.2"></a>
 
 | _Element_ | _Descripció_ |
 | --- | --- |
@@ -253,16 +254,15 @@ L&#39;usuari amb DNI \&lt;DNI\&gt; demana realitzar l&#39;operació (Atura publi
 <p align="center">
 <img align="center" src="img/operacioSobreUnaAplicacioResposta.png" />
 </p>
-
-
+<br/><br/><br/><br/><br/><br/>
 **Annex – exemple de missatges**
 
 Exemple de missatge amb el contingut del fitxer adjunts optimitzat seguint l&#39;estàndard MTOM (s&#39;obvien capçaleres HTTP i missatge SOAP).
 
 | _Exemple petició_ |
-
+| --- |
 <p align="center">
-   <Peticion xmlns="http://gencat.net/scsp/esquemes/peticion">
+   ``<Peticion xmlns="http://gencat.net/scsp/esquemes/peticion">
       <Atributos>
          <IdPeticion>CU1-DOGC-1331725182868</IdPeticion>
          <NumElementos>1</NumElementos>
@@ -322,9 +322,10 @@ Exemple de missatge amb el contingut del fitxer adjunts optimitzat seguint l&#39
             </DatosEspecificos>
          </SolicitudTransmision>
       </Solicitudes>
-   </Peticion>
+   </Peticion>``
 </p>
-**Annex – matèries BOE**
+
+### Annex – matèries BOE ###
 
 _Codi_ | _Descripció_ |
 | --- | --- |
