@@ -69,8 +69,6 @@ L&#39;organisme que realitza la publicació s&#39;identifica en l&#39;element de
 
 ### 3.1.1 Petició – dades específiques
 
-<img src="imatge/solicitudPublicacioPeticio.png" alt="test" style="float: left; margin-right: 10px;" />
-
 | _Element_ | _Descripció_ |
 | --- | --- |
  //peticioSolicitudPublicacio/identificador | Codi de document del sistema origen (únic).
@@ -80,6 +78,10 @@ L&#39;organisme que realitza la publicació s&#39;identifica en l&#39;element de
 //registre/registreSortida/data|Data d&#39;assentament de sortida de l&#39;organisme.
 //registre/registreEntrada/numero|Número d&#39;assentament d&#39;entrada a l&#39;EADOP.
 //registre/registreEntrada/data|Data d&#39;assentament d&#39;entrada a l&#39;EADOP.
+
+<p align="center">
+<img align="center" src="img/solicitudPublicacioPeticio.png" />
+</p>
 
 #### 3.1.1.1 Ordre d&#39;inserció
 
