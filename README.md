@@ -255,14 +255,14 @@ L&#39;usuari amb DNI \&lt;DNI\&gt; demana realitzar l&#39;operació (Atura publi
 <img align="center" src="img/operacioSobreUnaAplicacioResposta.png" />
 </p>
 <br/><br/><br/><br/><br/><br/>
-**Annex – exemple de missatges**
+
+### Annex – exemple de missatges ###
 
 Exemple de missatge amb el contingut del fitxer adjunts optimitzat seguint l&#39;estàndard MTOM (s&#39;obvien capçaleres HTTP i missatge SOAP).
 
 | _Exemple petició_ |
 | --- |
-<p align="center">
-~~~
+```
    <Peticion xmlns="http://gencat.net/scsp/esquemes/peticion">
       <Atributos>
          <IdPeticion>CU1-DOGC-1331725182868</IdPeticion>
@@ -324,8 +324,7 @@ Exemple de missatge amb el contingut del fitxer adjunts optimitzat seguint l&#39
          </SolicitudTransmision>
       </Solicitudes>
    </Peticion>
-~~~
-</p>
+```
 
 ### Annex – matèries BOE ###
 
