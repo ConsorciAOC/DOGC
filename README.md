@@ -238,6 +238,85 @@ Un exemple del text a signar és:
 
 L&#39;usuari amb DNI \&lt;DNI\&gt; demana realitzar l&#39;operació (Atura publicació / Reprèn publicació / Desisteix publicació) sobre la sol.licitud de publicació al DOGC amb identificador \&lt;codiSolicitud DOGC\&gt;.
 
+```XML
+<ordreOperacio xmlns="http://www.aoc.cat/dogc">
+	<missatge>L'usuari amb DNI 11111111H demana realitzar l'operació Atura publicació
+   sobre la sol.licitud de publicació al DOGC amb identificador 10.145.006.</missatge>
+	<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="Signature">
+		<ds:SignedInfo Id="SignedInfo">
+			<ds:CanonicalizationMethod
+             Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+			<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+			<ds:Reference Id="SignedDataObject-enveloped" URI="">
+				<ds:Transforms>
+					<ds:Transform 
+                   Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+					<ds:Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+				</ds:Transforms>
+				<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+				<ds:DigestValue>TJKv76MFPS59Me/iPCDEMWAq4As=</ds:DigestValue>
+			</ds:Reference>
+			<ds:Reference Id="SignedProperties-Reference"
+            Type="http://uri.etsi.org/01903/v1.2.2#SignedProperties" URI="#SignedProperties">
+				<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+				<ds:DigestValue>YMI9rXPH1XgWHUFoccQe9f9Rz54=</ds:DigestValue>
+			</ds:Reference>
+		</ds:SignedInfo>
+		<ds:SignatureValue Id="DocumentSignatureValue">
+NYkyv+0QH0onlad35S26ya0GW9/ojOWzxCHwpPQ1/+IJOHQJQ1joxeZfWjCJAFLDC4D6NNZfFlUV
+(. . .)
+UUd1IWXVtDsDzIIhZr7FQiHn311jn+hy1kfOYg==
+		</ds:SignatureValue>
+		<ds:KeyInfo Id="KeyInfo">
+			<ds:X509Data>
+				<ds:X509Certificate>
+MIIJIzCCCAugAwIBAgIQe+npPzpsnlNOZJA76B//lzANBgkqhkiG9w0BAQUFADCCATExCzAJBgNV
+BAYTAkVTMTswOQYDVQQKEzJBZ2VuY2lhIENhdGFsYW5hIGRlIENlcnRpZmljYWNpbyAoTklGIFEt
+(. . .)
+FgdCb7SaQuJzUFR6lXNmouGxdszz6KfGsnaISSmBzPndYfINJY8t9nddQ7nAU+Mcn8F7MEXUpsyv
+led9s2p7
+				</ds:X509Certificate>
+			</ds:X509Data>
+			<ds:KeyValue>
+				<ds:RSAKeyValue>
+					<ds:Modulus>
+lINpwmN7jj2L+tljm9FIvhY4S6GuaoLsl4DlFFWiuHV/piQVc2BB2befITM1HYaFf208IWUo97sZ
+(. . .)
+Em2+0Jtn8EpeJgB0bTjwE1M2wdECf5Vy6N/EdQ==
+					</ds:Modulus>
+					<ds:Exponent>AQAB</ds:Exponent>
+				</ds:RSAKeyValue>
+			</ds:KeyValue>
+		</ds:KeyInfo>
+		<ds:Object>
+			<xades:QualifyingProperties xmlns:xades="http://uri.etsi.org/01903/v1.2.2#"
+                Id="QualifyingProperties" Target="#Signature">
+				<xades:SignedProperties Id="SignedProperties">
+					<xades:SignedSignatureProperties>
+						<xades:SigningTime>2012-06-21T09:25:18.869Z</xades:SigningTime>
+						<xades:SigningCertificate>
+							<xades:Cert>
+								<xades:CertDigest>
+									<ds:DigestMethod 
+                               Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+									<ds:DigestValue>2C27TbSPoWPmSsmNj93SRmD6/bM=</ds:DigestValue>
+								</xades:CertDigest>
+								<xades:IssuerSerial>
+									<ds:X509IssuerName>CN=EC-SAFP,OU=Secretaria d'Administracio i Funcio Publica,OU=Vegeu https://www.catcert.net/verCIC-2   (c)03,OU=Serveis Publics de Certificacio ECV-2,L=Passatge de la Concepcio 11 08008 Barcelona,O=Agencia Catalana de Certificacio (NIF Q-0801176-I),C=ES
+									</ds:X509IssuerName>
+									<ds:X509SerialNumber>1647095(. . .)794604</ds:X509SerialNumber>
+								</xades:IssuerSerial>
+							</xades:Cert>
+						</xades:SigningCertificate>
+					</xades:SignedSignatureProperties>
+					<xades:SignedDataObjectProperties/>
+				</xades:SignedProperties>
+			</xades:QualifyingProperties>
+		</ds:Object>
+	</ds:Signature>
+</ordreOperacio>
+```
+
 | _Ordre d&#39;operació signada (exemple)_ |
 | --- |
 \&lt;ordreOperacio xmlns=&quot;http://www.aoc.cat/dogc&quot;\&gt;\&lt;missatge\&gt;L&#39;usuari amb DNI 11111111H demana realitzar l&#39;operació Atura publicaciósobre la sol.licitud de publicació al DOGC amb identificador 10.145.006.\&lt;/missatge\&gt;\&lt;ds:Signature xmlns:ds=&quot;http://www.w3.org/2000/09/xmldsig#&quot; Id=&quot;Signature&quot;\&gt;\&lt;ds:SignedInfo Id=&quot;SignedInfo&quot;\&gt;\&lt;ds:CanonicalizationMethodAlgorithm=&quot;http://www.w3.org/TR/2001/REC-xml-c14n-20010315&quot;/\&gt;\&lt;ds:SignatureMethod Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#rsa-sha1&quot;/\&gt;\&lt;ds:Reference Id=&quot;SignedDataObject-enveloped&quot; URI=&quot;&quot;\&gt;\&lt;ds:Transforms\&gt;\&lt;ds:Transform Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#enveloped-signature&quot;/\&gt;\&lt;ds:Transform Algorithm=&quot;http://www.w3.org/TR/2001/REC-xml-c14n-20010315&quot;/\&gt;\&lt;/ds:Transforms\&gt;\&lt;ds:DigestMethod Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#sha1&quot;/\&gt;\&lt;ds:DigestValue\&gt;TJKv76MFPS59Me/iPCDEMWAq4As=\&lt;/ds:DigestValue\&gt;\&lt;/ds:Reference\&gt;\&lt;ds:Reference Id=&quot;SignedProperties-Reference&quot;Type=&quot;http://uri.etsi.org/01903/v1.2.2#SignedProperties&quot; URI=&quot;#SignedProperties&quot;\&gt;\&lt;ds:DigestMethod Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#sha1&quot;/\&gt;\&lt;ds:DigestValue\&gt;YMI9rXPH1XgWHUFoccQe9f9Rz54=\&lt;/ds:DigestValue\&gt;\&lt;/ds:Reference\&gt;\&lt;/ds:SignedInfo\&gt;\&lt;ds:SignatureValue Id=&quot;DocumentSignatureValue&quot;\&gt;NYkyv+0QH0onlad35S26ya0GW9/ojOWzxCHwpPQ1/+IJOHQJQ1joxeZfWjCJAFLDC4D6NNZfFlUV(. . .)UUd1IWXVtDsDzIIhZr7FQiHn311jn+hy1kfOYg==\&lt;/ds:SignatureValue\&gt;\&lt;ds:KeyInfo Id=&quot;KeyInfo&quot;\&gt;\&lt;ds:X509Data\&gt;\&lt;ds:X509Certificate\&gt;MIIJIzCCCAugAwIBAgIQe+npPzpsnlNOZJA76B//lzANBgkqhkiG9w0BAQUFADCCATExCzAJBgNVBAYTAkVTMTswOQYDVQQKEzJBZ2VuY2lhIENhdGFsYW5hIGRlIENlcnRpZmljYWNpbyAoTklGIFEt(. . .)FgdCb7SaQuJzUFR6lXNmouGxdszz6KfGsnaISSmBzPndYfINJY8t9nddQ7nAU+Mcn8F7MEXUpsyvled9s2p7\&lt;/ds:X509Certificate\&gt;\&lt;/ds:X509Data\&gt;\&lt;ds:KeyValue\&gt;\&lt;ds:RSAKeyValue\&gt;\&lt;ds:Modulus\&gt;lINpwmN7jj2L+tljm9FIvhY4S6GuaoLsl4DlFFWiuHV/piQVc2BB2befITM1HYaFf208IWUo97sZ(. . .)Em2+0Jtn8EpeJgB0bTjwE1M2wdECf5Vy6N/EdQ==\&lt;/ds:Modulus\&gt;\&lt;ds:Exponent\&gt;AQAB\&lt;/ds:Exponent\&gt;\&lt;/ds:RSAKeyValue\&gt;\&lt;/ds:KeyValue\&gt;\&lt;/ds:KeyInfo\&gt;\&lt;ds:Object\&gt;\&lt;xades:QualifyingProperties xmlns:xades=&quot;http://uri.etsi.org/01903/v1.2.2#&quot;Id=&quot;QualifyingProperties&quot; Target=&quot;#Signature&quot;\&gt;\&lt;xades:SignedProperties Id=&quot;SignedProperties&quot;\&gt;\&lt;xades:SignedSignatureProperties\&gt;\&lt;xades:SigningTime\&gt;2012-06-21T09:25:18.869Z\&lt;/xades:SigningTime\&gt;\&lt;xades:SigningCertificate\&gt;\&lt;xades:Cert\&gt;\&lt;xades:CertDigest\&gt;\&lt;ds:DigestMethod Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#sha1&quot;/\&gt;\&lt;ds:DigestValue\&gt;2C27TbSPoWPmSsmNj93SRmD6/bM=\&lt;/ds:DigestValue\&gt;\&lt;/xades:CertDigest\&gt;\&lt;xades:IssuerSerial\&gt;\&lt;ds:X509IssuerName\&gt;CN=EC-SAFP,OU=Secretaria d&#39;Administracio i Funcio Publica,OU=Vegeu https://www.catcert.net/verCIC-2 (c)03,OU=Serveis Publics de Certificacio ECV-2,L=Passatge de la Concepcio 11 08008 Barcelona,O=Agencia Catalana de Certificacio (NIF Q-0801176-I),C=ES\&lt;/ds:X509IssuerName\&gt;\&lt;ds:X509SerialNumber\&gt;1647095(. . .)794604\&lt;/ds:X509SerialNumber\&gt;\&lt;/xades:IssuerSerial\&gt;\&lt;/xades:Cert\&gt;\&lt;/xades:SigningCertificate\&gt;\&lt;/xades:SignedSignatureProperties\&gt;\&lt;xades:SignedDataObjectProperties/\&gt;\&lt;/xades:SignedProperties\&gt;\&lt;/xades:QualifyingProperties\&gt;\&lt;/ds:Object\&gt;\&lt;/ds:Signature\&gt;\&lt;/ordreOperacio\&gt; |
