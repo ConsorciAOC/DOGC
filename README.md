@@ -260,69 +260,70 @@ L&#39;usuari amb DNI \&lt;DNI\&gt; demana realitzar l&#39;operació (Atura publi
 Exemple de missatge amb el contingut del fitxer adjunts optimitzat seguint l&#39;estàndard MTOM (s&#39;obvien capçaleres HTTP i missatge SOAP).
 
 | _Exemple petició_ |
-| --- |
-<Peticion xmlns="http://gencat.net/scsp/esquemes/peticion">
-	<Atributos>
-		<IdPeticion>CU1-DOGC-1331725182868</IdPeticion>
-		<NumElementos>1</NumElementos>
-		<TimeStamp/>
-		<CodigoCertificado>DOGC</CodigoCertificado>
-		<CodigoProducto>DOGC</CodigoProducto>
-		<IdSolicitanteOriginal>9821920002</IdSolicitanteOriginal>
-		<DatosAutorizacion>
-			<IdentificadorSolicitante>9821920002</IdentificadorSolicitante>
-			<NombreSolicitante>Consorci AOC</NombreSolicitante>
-			<Finalidad>ADMINELEC</Finalidad>
-		</DatosAutorizacion>
-		<Funcionario>
-			<NombreCompletoFuncionario>FUNCIONARI</NombreCompletoFuncionario>
-			<NifFuncionario>NIF</NifFuncionario>
-		</Funcionario>
-	</Atributos>
-	<Solicitudes>
-		<SolicitudTransmision>
-			<DatosGenericos>
-				<Solicitante>
-					<IdentificadorSolicitante>9821920002</IdentificadorSolicitante>
-					<NombreSolicitante>Consorci AOC</NombreSolicitante>
-					<Finalidad>ADMINELEC</Finalidad>
-					<Consentimiento>Si</Consentimiento>
-					<Funcionario>
-						<NombreCompletoFuncionario>FUNCIONARI</NombreCompletoFuncionario>
-						<NifFuncionario>NIF</NifFuncionario>
-					</Funcionario>
-				</Solicitante>
-				<Transmision>
-					<CodigoCertificado>DOGC</CodigoCertificado>
-					<IdSolicitud>1</IdSolicitud>
-					<IdTransmision>NUM EXPEDIENT</IdTransmision>
-				</Transmision>
-				<Ficheros>
-					<Fichero>
-						<NombreFichero>Anunci.doc</NombreFichero>
-						<Contenido>
-							<inc:Include href="cid:adjunt-dogc"
-                        xmlns:inc="http://www.w3.org/2004/08/xop/include"/>
-						</Contenido>
-						<Id>1</Id>
-						<Via>Entrada</Via>
-					</Fichero>
-				</Ficheros>
-			</DatosGenericos>
-			<DatosEspecificos>
-				<peticioSolicitudPublicacio xmlns="http://www.aoc.cat/dogc/tramesa">
-					<identificador>1</identificador>
-					<ordreInsercio>
-                 PG9yZHJlSW5zZXJjaW8geG1sbnMjYyMDQzOTwvZHMcm9wZXJ0aWVzPjwvZHM6T2JqZWN0Pgo8L
-                 (. . .)
-                 2RzOlNpZ25hdHVyZT48L29yZHJlSW5zZXJjaW8+
-					</ordreInsercio>
-				</peticioSolicitudPublicacio>
-			</DatosEspecificos>
-		</SolicitudTransmision>
-	</Solicitudes>
-</Peticion>
 
+<p align="center">
+   <Peticion xmlns="http://gencat.net/scsp/esquemes/peticion">
+      <Atributos>
+         <IdPeticion>CU1-DOGC-1331725182868</IdPeticion>
+         <NumElementos>1</NumElementos>
+         <TimeStamp/>
+         <CodigoCertificado>DOGC</CodigoCertificado>
+         <CodigoProducto>DOGC</CodigoProducto>
+         <IdSolicitanteOriginal>9821920002</IdSolicitanteOriginal>
+         <DatosAutorizacion>
+            <IdentificadorSolicitante>9821920002</IdentificadorSolicitante>
+            <NombreSolicitante>Consorci AOC</NombreSolicitante>
+            <Finalidad>ADMINELEC</Finalidad>
+         </DatosAutorizacion>
+         <Funcionario>
+            <NombreCompletoFuncionario>FUNCIONARI</NombreCompletoFuncionario>
+            <NifFuncionario>NIF</NifFuncionario>
+         </Funcionario>
+      </Atributos>
+      <Solicitudes>
+         <SolicitudTransmision>
+            <DatosGenericos>
+               <Solicitante>
+                  <IdentificadorSolicitante>9821920002</IdentificadorSolicitante>
+                  <NombreSolicitante>Consorci AOC</NombreSolicitante>
+                  <Finalidad>ADMINELEC</Finalidad>
+                  <Consentimiento>Si</Consentimiento>
+                  <Funcionario>
+                     <NombreCompletoFuncionario>FUNCIONARI</NombreCompletoFuncionario>
+                     <NifFuncionario>NIF</NifFuncionario>
+                  </Funcionario>
+               </Solicitante>
+               <Transmision>
+                  <CodigoCertificado>DOGC</CodigoCertificado>
+                  <IdSolicitud>1</IdSolicitud>
+                  <IdTransmision>NUM EXPEDIENT</IdTransmision>
+               </Transmision>
+               <Ficheros>
+                  <Fichero>
+                     <NombreFichero>Anunci.doc</NombreFichero>
+                     <Contenido>
+                        <inc:Include href="cid:adjunt-dogc"
+                           xmlns:inc="http://www.w3.org/2004/08/xop/include"/>
+                     </Contenido>
+                     <Id>1</Id>
+                     <Via>Entrada</Via>
+                  </Fichero>
+               </Ficheros>
+            </DatosGenericos>
+            <DatosEspecificos>
+               <peticioSolicitudPublicacio xmlns="http://www.aoc.cat/dogc/tramesa">
+                  <identificador>1</identificador>
+                  <ordreInsercio>
+                  PG9yZHJlSW5zZXJjaW8geG1sbnMjYyMDQzOTwvZHMcm9wZXJ0aWVzPjwvZHM6T2JqZWN0Pgo8L
+                  (. . .)
+                  2RzOlNpZ25hdHVyZT48L29yZHJlSW5zZXJjaW8+
+                  </ordreInsercio>
+               </peticioSolicitudPublicacio>
+            </DatosEspecificos>
+         </SolicitudTransmision>
+      </Solicitudes>
+   </Peticion>
+</p>
 **Annex – matèries BOE**
 
 _Codi_ | _Descripció_ |
