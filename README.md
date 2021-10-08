@@ -69,6 +69,8 @@ L&#39;organisme que realitza la publicació s&#39;identifica en l&#39;element de
 
 ### 3.1.1 Petició – dades específiques
 
+<img src="imatge/solicitudPublicacioPeticio.png" alt="test" style="float: left; margin-right: 10px;" />
+
 | _Element_ | _Descripció_ |
 | --- | --- |
  //peticioSolicitudPublicacio/identificador | Codi de document del sistema origen (únic).
@@ -142,9 +144,7 @@ El DOGC requereix que tota operació relacionada amb una publicació vagi acompa
 | _Exempció pagament_ | _Taxa pagament_ | _Condicions de publicació admeses_ |
 | --- | --- | --- |
 SI | N/A |<ul><li>0: en qualsevol data</li><li>1: urgent</li><li>2: data concreta (segons element data)</li><li>3: no abans de la data de publicació especificada (a l&#39;element data)</li></ul>
-| --- | --- | --- |
 NO | 1: taxa normal |<ul><li>0: en qualsevol data</li><li>2: data concreta (segons element data)</li><li>3: no abans de la data de publicació especificada (a l&#39;element data)</li></ul>
-| --- | --- | --- |
 NO | 2: taxa urgent |1: urgent (només disponible si està exempt de pagament
 
 _Ordre d&#39;insercio signada (exemple)_
