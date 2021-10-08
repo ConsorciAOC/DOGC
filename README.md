@@ -49,15 +49,11 @@ Per poder realitzar la integració cal conèixer prèviament la següent documen
 
 Les operacions disponibles a través del servei són les que es presenten a continuació:
 
-| **EMISSOR** |
-| --- |
-| DOGC (Diari Oficial de la Generalitat de Catalunya) |
-| **PRODUCTE** | **MODALITAT** | **DESCRIPCIO** |
-| **DOGC** | DOGC | Operacions del servei de publicació del DOGC:
+- **EMISSOR**: DOGC (Diari Oficial de la Generalitat de Catalunya)
 
-- Sol·licitud de publicació i càrrega de fitxers
-- Consulta d&#39;estat d&#39;una publicació
-- Realitzar operacions sobre una publicació
+| **PRODUCTE** | **MODALITAT** | **DESCRIPCIO** |
+| --- | --- | --- |
+| **DOGC** | DOGC | Operacions del servei de publicació del DOGC:<ul><li>Sol·licitud de publicació i càrrega de fitxers</li><li>Consulta d&#39;estat d&#39;una publicació</li><li>Realitzar operacions sobre una publicació</li></ul>
 
 # 3 Missatgeria del servei <a name="3"></a>
 
