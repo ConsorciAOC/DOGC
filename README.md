@@ -155,9 +155,140 @@ NO | 1: taxa normal |<ul><li>0: en qualsevol data</li><li>2: data concreta (sego
 NO | 2: taxa urgent |1: urgent (només disponible si està exempt de pagament
 
 _Ordre d&#39;insercio signada (exemple)_
-| --- |
-\&lt;ordreInsercio xmlns=&quot;http://www.aoc.cat/dogc&quot;\&gt; \&lt;document\&gt; \&lt;identificador\&gt;ID-1\&lt;/identificador\&gt; \&lt;titol\&gt; \&lt;titol\&gt;Títol en català\&lt;/titol\&gt; \&lt;idioma\&gt;ca\_es\&lt;/idioma\&gt; \&lt;/titol\&gt; \&lt;tipus\&gt;009\&lt;/tipus\&gt; \&lt;observacions\&gt;Observacions\&lt;/observacions\&gt; \&lt;data\&gt;2012-08-08\&lt;/data\&gt; \&lt;dadesPersonals\&gt;N\&lt;/dadesPersonals\&gt; \&lt;/document\&gt; \&lt;fitxers\&gt; \&lt;fitxer\&gt; \&lt;identificador\&gt;fitxer-1\&lt;/identificador\&gt; \&lt;nom\&gt;principal.doc\&lt;/nom\&gt; \&lt;idioma\&gt;ca\_es\&lt;/idioma\&gt; \&lt;tipus\&gt;1\&lt;/tipus\&gt; \&lt;hash\&gt;dsdasad=\&lt;/hash\&gt; \&lt;/fitxer\&gt; \&lt;fitxer\&gt; \&lt;identificador\&gt;fitxer-2\&lt;/identificador\&gt; \&lt;nom\&gt;annex1.doc\&lt;/nom\&gt; \&lt;idioma\&gt;ca\_es\&lt;/idioma\&gt; \&lt;tipus\&gt;2\&lt;/tipus\&gt; \&lt;ordre\&gt;1\&lt;/ordre\&gt; \&lt;hash\&gt;dsdasad=\&lt;/hash\&gt; \&lt;/fitxer\&gt; \&lt;fitxer\&gt; \&lt;identificador\&gt;fitxer-3\&lt;/identificador\&gt; \&lt;nom\&gt;annex2.doc\&lt;/nom\&gt; \&lt;idioma\&gt;ca\_es\&lt;/idioma\&gt; \&lt;tipus\&gt;2\&lt;/tipus\&gt; \&lt;ordre\&gt;2\&lt;/ordre\&gt; \&lt;hash\&gt;dsdasad=\&lt;/hash\&gt; \&lt;/fitxer\&gt; \&lt;fitxer\&gt; \&lt;identificador\&gt;fitxer-4\&lt;/identificador\&gt; \&lt;nom\&gt;imatge.jpg\&lt;/nom\&gt; \&lt;idioma\&gt;ca\_es\&lt;/idioma\&gt; \&lt;tipus\&gt;3\&lt;/tipus\&gt; \&lt;hash\&gt;dsdasad=\&lt;/hash\&gt; \&lt;/fitxer\&gt; \&lt;fitxer\&gt; \&lt;identificador\&gt;fitxer-5\&lt;/identificador\&gt; \&lt;nom\&gt;pdf.pdf\&lt;/nom\&gt; \&lt;idioma\&gt;ca\_es\&lt;/idioma\&gt; \&lt;tipus\&gt;3\&lt;/tipus\&gt; \&lt;hash\&gt;dsdasad=\&lt;/hash\&gt; \&lt;/fitxer\&gt; \&lt;/fitxers\&gt; \&lt;usuaris\&gt; \&lt;signadorNom\&gt;Usuari signador\&lt;/signadorNom\&gt; \&lt;signadorCorreu\&gt;rnoguera@aoc.cat\&lt;/signadorCorreu\&gt; \&lt;signadorTelefon\&gt;935555555\&lt;/signadorTelefon\&gt; \&lt;signadorNIF\&gt;11111111H\&lt;/signadorNIF\&gt; \&lt;contacteNom\&gt;Usuari contacte\&lt;/contacteNom\&gt; \&lt;contacteCorreu\&gt;rnoguera@aoc.cat\&lt;/contacteCorreu\&gt; \&lt;contacteTelefon\&gt;935555555\&lt;/contacteTelefon\&gt; \&lt;/usuaris\&gt; \&lt;exempcioPagament\&gt; \&lt;llei\&gt;Llei\&lt;/llei\&gt; \&lt;article\&gt;Article\&lt;/article\&gt; \&lt;/exempcioPagament\&gt; \&lt;condicioPublicacio\&gt; \&lt;condicio\&gt;0\&lt;/condicio\&gt; \&lt;/condicioPublicacio\&gt; \&lt;ds:Signature xmlns:ds=&quot;http://www.w3.org/2000/09/xmldsig#&quot; Id=&quot;Signature&quot;\&gt; \&lt;ds:SignedInfo Id=&quot;SignedInfo&quot;\&gt; \&lt;ds:CanonicalizationMethod Algorithm=&quot;http://www.w3.org/TR/2001/REC-xml-c14n-20010315&quot;/\&gt; \&lt;ds:SignatureMethod Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#rsa-sha1&quot;/\&gt; \&lt;ds:Reference Id=&quot;SignedDataObject-enveloped&quot; URI=&quot;&quot;\&gt; \&lt;ds:Transforms\&gt; \&lt;ds:TransformAlgorithm=&quot;http://www.w3.org/2000/09/xmldsig#enveloped-signature&quot;/\&gt; \&lt;ds:TransformAlgorithm=&quot;http://www.w3.org/TR/2001/REC-xml-c14n-20010315&quot;/\&gt; \&lt;/ds:Transforms\&gt; \&lt;ds:DigestMethod Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#sha1&quot;/\&gt; \&lt;ds:DigestValue\&gt;XYopNgTlR1RtxfwvyynUxZ3ZiO0=\&lt;/ds:DigestValue\&gt; \&lt;/ds:Reference\&gt; \&lt;ds:Reference Id=&quot;SignedProperties-Reference&quot; Type=&quot;http://uri.etsi.org/01903/v1.2.2#SignedProperties&quot; URI=&quot;#SignedProperties&quot;\&gt; \&lt;ds:DigestMethod Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#sha1&quot;/\&gt; \&lt;ds:DigestValue\&gt;OLxDVVEwNJjGs5+STyKvIMXvMZ8=\&lt;/ds:DigestValue\&gt; \&lt;/ds:Reference\&gt; \&lt;/ds:SignedInfo\&gt; \&lt;ds:SignatureValue Id=&quot;DocumentSignatureValue&quot;\&gt;d65yEmuBrgfRLyNvC3SGHk0OKkzZPqFlqAByEFUIzeC8qK9SEGq/TN6IDu/nXQX1+Qgsn5eRiUNA(...)gY9vQBCmGYYPeaHTpxZQxpOCDyX6Pf9BtiPgKQ==\&lt;/ds:SignatureValue\&gt; \&lt;ds:KeyInfo Id=&quot;KeyInfo&quot;\&gt; \&lt;ds:X509Data\&gt; \&lt;ds:X509Certificate\&gt;MIIJIzCCCAugAwIBAgIQe+npPzpsnlNOZJA76B//lzANBgkqhkiG9w0BAQUFADCCATExCzAJBgNV(...)FgdCb7SaQuJzUFR6lXNmouGxdszz6KfGsnaISSmBzPndYfINJY8t9nddQ7nAU+Mcn8F7MEXUpsyvled9s2p7\&lt;/ds:X509Certificate\&gt; \&lt;/ds:X509Data\&gt; \&lt;ds:KeyValue\&gt; \&lt;ds:RSAKeyValue\&gt; \&lt;ds:Modulus\&gt;lINpwmN7jj2L+tljm9FIvhY4S6GuaoLsl4DlFFWiuHV/piQVc2BB2befITM1HYaFf208IWUo97sZ(...)WPHl7D/R47rTiKBwiRWmzSPhG/BB/Y+yb6NaZMpLy7dgz3b3cc51jSGi7ijp0KrQb/r8JlKir1wXEm2+0Jtn8EpeJgB0bTjwE1M2wdECf5Vy6N/EdQ==\&lt;/ds:Modulus\&gt; \&lt;ds:Exponent\&gt;AQAB\&lt;/ds:Exponent\&gt; \&lt;/ds:RSAKeyValue\&gt; \&lt;/ds:KeyValue\&gt; \&lt;/ds:KeyInfo\&gt; \&lt;ds:Object\&gt; \&lt;xades:QualifyingProperties xmlns:xades=&quot;http://uri.etsi.org/01903/v1.2.2#&quot; Id=&quot;QualifyingProperties&quot; Target=&quot;#Signature&quot;\&gt; \&lt;xades:SignedProperties Id=&quot;SignedProperties&quot;\&gt; \&lt;xades:SignedSignatureProperties\&gt; \&lt;xades:SigningTime\&gt;2012-08-14T11:58:42.848Z\&lt;/xades:SigningTime\&gt; \&lt;xades:SigningCertificate\&gt; \&lt;xades:Cert\&gt; \&lt;xades:CertDigest\&gt; \&lt;ds:DigestMethod Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#sha1&quot;/\&gt; \&lt;ds:DigestValue\&gt;2C27TbSPoWPmSsmNj93SRmD6/bM=\&lt;/ds:DigestValue\&gt; \&lt;/xades:CertDigest\&gt; \&lt;xades:IssuerSerial\&gt; \&lt;ds:X509IssuerName\&gt;CN=EC-SAFP,OU=Secretaria d&#39;Administracio i Funcio Publica,OU=Vegeu https://www.catcert.net/verCIC-2 (c)03,OU=Serveis Publics de Certificacio ECV-2,L=Passatge de la Concepcio 11 08008 Barcelona,O=Agencia Catalana de Certificacio (NIF Q-0801176-I),C=ES\&lt;/ds:X509IssuerName\&gt; \&lt;ds:X509SerialNumber\&gt;164709579460476598671267166040352620439\&lt;/ds:X509SerialNumber\&gt; \&lt;/xades:IssuerSerial\&gt; \&lt;/xades:Cert\&gt; \&lt;/xades:SigningCertificate\&gt; \&lt;/xades:SignedSignatureProperties\&gt; \&lt;xades:SignedDataObjectProperties/\&gt; \&lt;/xades:SignedProperties\&gt; \&lt;/xades:QualifyingProperties\&gt; \&lt;/ds:Object\&gt;\&lt;/ds:Signature\&gt;\&lt;/ordreInsercio\&gt; |
-| --- |
+```XML
+<ordreInsercio xmlns="http://www.aoc.cat/dogc">
+	<document>
+		<identificador>ID-1</identificador>
+		<titol>
+			<titol>Títol en català</titol>
+			<idioma>ca_es</idioma>
+		</titol>
+		<tipus>009</tipus>
+		<observacions>Observacions</observacions>
+		<data>2012-08-08</data>
+		<dadesPersonals>N</dadesPersonals>
+	</document>
+	<fitxers>
+		<fitxer>
+			<identificador>fitxer-1</identificador>
+			<nom>principal.doc</nom>
+			<idioma>ca_es</idioma>
+			<tipus>1</tipus>
+			<hash>dsdasad=</hash>
+		</fitxer>
+		<fitxer>
+			<identificador>fitxer-2</identificador>
+			<nom>annex1.doc</nom>
+			<idioma>ca_es</idioma>
+			<tipus>2</tipus>
+			<ordre>1</ordre>
+			<hash>dsdasad=</hash>
+		</fitxer>
+		<fitxer>
+			<identificador>fitxer-3</identificador>
+			<nom>annex2.doc</nom>
+			<idioma>ca_es</idioma>
+			<tipus>2</tipus>
+			<ordre>2</ordre>
+			<hash>dsdasad=</hash>
+		</fitxer>
+		<fitxer>
+			<identificador>fitxer-4</identificador>
+			<nom>imatge.jpg</nom>
+			<idioma>ca_es</idioma>
+			<tipus>3</tipus>
+			<hash>dsdasad=</hash>
+		</fitxer>
+		<fitxer>
+			<identificador>fitxer-5</identificador>
+			<nom>pdf.pdf</nom>
+			<idioma>ca_es</idioma>
+			<tipus>3</tipus>
+			<hash>dsdasad=</hash>
+		</fitxer>
+	</fitxers>
+	<usuaris>
+		<signadorNom>Usuari signador</signadorNom>
+		<signadorCorreu>rnoguera@aoc.cat</signadorCorreu>
+		<signadorTelefon>935555555</signadorTelefon>
+		<signadorNIF>11111111H</signadorNIF>
+		<contacteNom>Usuari contacte</contacteNom>
+		<contacteCorreu>rnoguera@aoc.cat</contacteCorreu>
+		<contacteTelefon>935555555</contacteTelefon>
+	</usuaris>
+	<exempcioPagament>
+		<llei>Llei</llei>
+		<article>Article</article>
+	</exempcioPagament>
+	<condicioPublicacio>
+		<condicio>0</condicio>
+	</condicioPublicacio>
+	<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="Signature">
+		<ds:SignedInfo Id="SignedInfo">
+			<ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+			<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+			<ds:Reference Id="SignedDataObject-enveloped" URI="">
+				<ds:Transforms>
+					<ds:Transform
+                        Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+					<ds:Transform
+                        Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+				</ds:Transforms>
+				<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+				<ds:DigestValue>XYopNgTlR1RtxfwvyynUxZ3ZiO0=</ds:DigestValue>
+			</ds:Reference>
+			<ds:Reference Id="SignedProperties-Reference" 
+                          Type="http://uri.etsi.org/01903/v1.2.2#SignedProperties" URI="#SignedProperties">
+				<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+				<ds:DigestValue>OLxDVVEwNJjGs5+STyKvIMXvMZ8=</ds:DigestValue>
+			</ds:Reference>
+		</ds:SignedInfo>
+		<ds:SignatureValue Id="DocumentSignatureValue">
+d65yEmuBrgfRLyNvC3SGHk0OKkzZPqFlqAByEFUIzeC8qK9SEGq/TN6IDu/nXQX1+Qgsn5eRiUNA
+(...)
+gY9vQBCmGYYPeaHTpxZQxpOCDyX6Pf9BtiPgKQ==
+		</ds:SignatureValue>
+		<ds:KeyInfo Id="KeyInfo">
+			<ds:X509Data>
+				<ds:X509Certificate>
+MIIJIzCCCAugAwIBAgIQe+npPzpsnlNOZJA76B//lzANBgkqhkiG9w0BAQUFADCCATExCzAJBgNV
+(...)
+FgdCb7SaQuJzUFR6lXNmouGxdszz6KfGsnaISSmBzPndYfINJY8t9nddQ7nAU+Mcn8F7MEXUpsyv
+led9s2p7
+				</ds:X509Certificate>
+			</ds:X509Data>
+			<ds:KeyValue>
+				<ds:RSAKeyValue>
+					<ds:Modulus>
+lINpwmN7jj2L+tljm9FIvhY4S6GuaoLsl4DlFFWiuHV/piQVc2BB2befITM1HYaFf208IWUo97sZ
+(...)
+WPHl7D/R47rTiKBwiRWmzSPhG/BB/Y+yb6NaZMpLy7dgz3b3cc51jSGi7ijp0KrQb/r8JlKir1wX
+Em2+0Jtn8EpeJgB0bTjwE1M2wdECf5Vy6N/EdQ==
+					</ds:Modulus>
+					<ds:Exponent>AQAB</ds:Exponent>
+				</ds:RSAKeyValue>
+			</ds:KeyValue>
+		</ds:KeyInfo>
+		<ds:Object>
+			<xades:QualifyingProperties xmlns:xades="http://uri.etsi.org/01903/v1.2.2#" Id="QualifyingProperties" Target="#Signature">
+				<xades:SignedProperties Id="SignedProperties">
+					<xades:SignedSignatureProperties>
+						<xades:SigningTime>2012-08-14T11:58:42.848Z</xades:SigningTime>
+						<xades:SigningCertificate>
+							<xades:Cert>
+								<xades:CertDigest>
+									<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+									<ds:DigestValue>2C27TbSPoWPmSsmNj93SRmD6/bM=</ds:DigestValue>
+								</xades:CertDigest>
+								<xades:IssuerSerial>
+									<ds:X509IssuerName>CN=EC-SAFP,OU=Secretaria d'Administracio i Funcio Publica,OU=Vegeu https://www.catcert.net/verCIC-2   (c)03,OU=Serveis Publics de Certificacio ECV-2,L=Passatge de la Concepcio 11 08008 Barcelona,O=Agencia Catalana de Certificacio (NIF Q-0801176-I),C=ES</ds:X509IssuerName>
+									<ds:X509SerialNumber>164709579460476598671267166040352620439</ds:X509SerialNumber>
+								</xades:IssuerSerial>
+							</xades:Cert>
+						</xades:SigningCertificate>
+					</xades:SignedSignatureProperties>
+					<xades:SignedDataObjectProperties/>
+```
 
 ### 3.1.2 Petició – dades genèriques <a name="3.1.2"></a>
 
