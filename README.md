@@ -1,26 +1,6 @@
 # Via Oberta – DOGC
 Documentació d'integració del servei DOGC del Consorci AOC.
 
-**Control del document**
-
-**Informació general**
-
-| **Títol:** | Diari Oficial de la Generalitat de Catalunya. Document d&#39;integració del servei |
-| --- | --- |
-**Creat per:** | Departament d&#39;Operacions – Unitat de Projectes
-**A revisar per:** | Departament d&#39;Operacions – Suport a Integracions
-**A aprovar per:** | Departament d&#39;Operacions – Suport a Integracions
-**Llista de distribució:**
-**Nom del document:** | DI - DOGC.doc
-
-**Històric de revisions**
-
-| **Versió** | **Data** | **Autor** | **Comentaris** |
-| --- | --- | --- | --- |
-V1.0 | 18/06/2012 | Roger Noguera i Arnau | Creació del document.
-V1.1 | 02/04/2014 | Roger Noguera i Arnau | Adaptació a canvis en els serveis del DOGC.
-V2.0 | 18/07/2016 | Roger Noguera i Arnau | Suport de publicació al TEU del BOE via DOGC.
-
 # **Índex** #
 
 1. [Introducció](#1)
@@ -448,7 +428,7 @@ Em2+0Jtn8EpeJgB0bTjwE1M2wdECf5Vy6N/EdQ==
 
 | _Element_ | _Descripció_ |
 | --- | --- |
-//respostaOperacioPublicacio/estat/codiEstat | Codi d&#39;estat en que es troba la sol·licitud:<ul><li>1: En curs</li><li>2: Finalitzada</li><li>3: Aturada</li<li>4: Pendent d&#39;aturar</li><li>5: Desistida</li><li>6: Pendent de desistir</li><li>7: Desestimada</li></ul>
+//respostaOperacioPublicacio/estat/codiEstat | Codi d&#39;estat en que es troba la sol·licitud:<ul><li>1: En curs</li><li>2: Finalitzada</li><li>3: Aturada</li><li>4: Pendent d&#39;aturar</li><li>5: Desistida</li><li>6: Pendent de desistir</li><li>7: Desestimada</li></ul>
 //peticioOperacioPublicacio/resultat/codiResultat | Codi de resultat de l&#39;operació:<ul><li>0: operació realitzada correctament</li><li>1: manquen dades o alguna dada conté valors incorrectes</li><li>3: codi de sol·licitud invàlida</li><li>4: fitxer de signatura invàlid</li><li>5: operació invàlida (p.e. no es pot aturar una sol·licitud ja aturada o reprendre una sol·licitud no aturada)</li><li>6: fitxers enviats no es poden processar</li><li>7: l&#39;operació ha d&#39;estar signada</li><li>502: error genèric realitzant l&#39;operació</li></ul>
 //peticioOperacioPublicacio/resultat/descripcio | Descripció del resultat de la consulta.
 
