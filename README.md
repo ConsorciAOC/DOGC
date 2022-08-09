@@ -25,7 +25,7 @@ Per poder realitzar la integració cal conèixer prèviament la següent documen
 
 - [Document de Missatgeria Genèrica de la PCI del Consorci AOC.][PCI]
 
-[PCI]:https://github.com/ConsorciAOC/
+[PCI]:https://github.com/ConsorciAOC/PCI
 
 
 # 2 Transmissions de dades disponibles <a name="2"></a>
