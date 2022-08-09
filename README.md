@@ -23,7 +23,10 @@ Aquest document detalla la missatgeria associada al servei de publicació del Di
 
 Per poder realitzar la integració cal conèixer prèviament la següent documentació:
 
-- Document d&#39;_Especificació de missatgeria pel consum de productes de la plataforma PCI_ del Consorci AOC.
+- [Document de Missatgeria Genèrica de la PCI del Consorci AOC.][PCI]
+
+[PCI]:https://github.com/ConsorciAOC/
+
 
 # 2 Transmissions de dades disponibles <a name="2"></a>
 
@@ -107,7 +110,7 @@ El DOGC requereix que tota operació relacionada amb una publicació vagi acompa
 //pagamentTercer/poblacio | Població del pagador. 
 //pagamentTercer/telefon | Telèfon del pagador. 
 //pagamentTercer/correu | Correu electrònic del pagador. 
-//ordreInsercio/condicioPublicacio | Bloc de dades corresponent a les condicions de publicació del document.<br/>Per més detalls sobre les condicions de publicació admeses en base al mode de pagament consulteu l&#39;apartat 3.1.1.2 d&#39;aquest document.
+//ordreInsercio/condicioPublicacio | Bloc de dades corresponent a les condicions de publicació del document.<br/>Per més detalls sobre les condicions de publicació admeses en base al mode de pagament consulteu [l'apartat 3.1.1.2](#3.1.1.2) d&#39;aquest document.
 //condicioPublicacio/condicio | Condició de publicació:<ul><li>0: en qualsevol data</li><li>1: urgent (només disponible si està exempt de pagament</li><li>2: data concreta (segons element data)</li><li>3: no abans de la data de publicació especificada (a l&#39;element data)</li><li>4: juntament amb un altre document (identificat per identificadorRelacionat)</li><li>5: després d&#39;un altre document (identificat per identificadorRelacionat)</li></ul>
 //condicioPublicacio/identificadorRelacionat | Identificador del document en el sistema origen relacionat. EACAT no realitzarà cap tipus de validació d&#39;existència de les publicacions referenciades.
 //condicioPublicacio/data | Data de condició de publicació.
@@ -122,7 +125,7 @@ El DOGC requereix que tota operació relacionada amb una publicació vagi acompa
 /vboe/peuSignatura/localitat | Població on té lloc la signatura.
 //boe/peuSignatura/signador | Càrrec i nom i dos cognoms del signatari. En els casos d&#39;actuació administrativa automatitzada pot consistir únicament en la identificació de l&#39;organisme o unitat signatària. En cas d&#39;alteració de la competència caldrà incloure les referències corresponents.
 
-#### 3.1.1.2 Condicions de publicació en base al mode de pagament
+#### 3.1.1.2 Condicions de publicació en base al mode de pagament <a name="3.1.1.2"></a>
 
 | _Exempció pagament_ | _Taxa pagament_ | _Condicions de publicació admeses_ |
 | --- | --- | --- |
@@ -343,7 +346,7 @@ El DOGC requereix que tota operació relacionada amb una publicació vagi acompa
 
 Un exemple del text a signar és:
 
-L&#39;usuari amb DNI \&lt;DNI\&gt; demana realitzar l&#39;operació (Atura publicació / Reprèn publicació / Desisteix publicació) sobre la sol.licitud de publicació al DOGC amb identificador \&lt;codiSolicitud DOGC\&gt;.
+L&#39;usuari amb DNI **DNI** demana realitzar l&#39;operació (Atura publicació / Reprèn publicació / Desisteix publicació) sobre la sol.licitud de publicació al DOGC amb identificador **codiSolicitud DOGC**.
 
 ```XML
 <ordreOperacio xmlns="http://www.aoc.cat/dogc">
